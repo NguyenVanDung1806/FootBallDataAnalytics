@@ -1,0 +1,19 @@
+[2024-11-18T09:07:14.410+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: wikipedia_flow.transform_wikipedia_data manual__2024-11-18T09:07:10.029629+00:00 [queued]>
+[2024-11-18T09:07:14.414+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: wikipedia_flow.transform_wikipedia_data manual__2024-11-18T09:07:10.029629+00:00 [queued]>
+[2024-11-18T09:07:14.415+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 1
+[2024-11-18T09:07:14.421+0000] {taskinstance.py:1380} INFO - Executing <Task(PythonOperator): transform_wikipedia_data> on 2024-11-18 09:07:10.029629+00:00
+[2024-11-18T09:07:14.423+0000] {standard_task_runner.py:57} INFO - Started process 166 to run task
+[2024-11-18T09:07:14.425+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'wikipedia_flow', 'transform_wikipedia_data', 'manual__2024-11-18T09:07:10.029629+00:00', '--job-id', '10', '--raw', '--subdir', 'DAGS_FOLDER/wikipedia.py', '--cfg-path', '/tmp/tmpymfkzg7j']
+[2024-11-18T09:07:14.427+0000] {standard_task_runner.py:85} INFO - Job 10: Subtask transform_wikipedia_data
+[2024-11-18T09:07:14.454+0000] {task_command.py:415} INFO - Running <TaskInstance: wikipedia_flow.transform_wikipedia_data manual__2024-11-18T09:07:10.029629+00:00 [running]> on host scheduler
+[2024-11-18T09:07:14.568+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='ClarkSon Tech' AIRFLOW_CTX_DAG_ID='wikipedia_flow' AIRFLOW_CTX_TASK_ID='transform_wikipedia_data' AIRFLOW_CTX_EXECUTION_DATE='2024-11-18T09:07:10.029629+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-11-18T09:07:10.029629+00:00'
+[2024-11-18T09:07:44.381+0000] {connectionpool.py:871} WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPSConnectionPool(host='geocode.arcgis.com', port=443): Read timed out. (read timeout=10)")': /arcgis/rest/services/World/GeocodeServer/findAddressCandidates?singleLine=Cotton+Bowl+Stadium%2C+United+States&f=json&maxLocations=1
+[2024-11-18T09:09:46.000+0000] {local_task_job_runner.py:294} WARNING - State of this instance has been externally set to failed. Terminating instance.
+[2024-11-18T09:09:46.008+0000] {process_utils.py:131} INFO - Sending 15 to group 166. PIDs of all processes in the group: [166]
+[2024-11-18T09:09:46.009+0000] {process_utils.py:86} INFO - Sending the signal 15 to group 166
+[2024-11-18T09:09:46.010+0000] {taskinstance.py:1630} ERROR - Received SIGTERM. Terminating subprocesses.
+[2024-11-18T09:09:46.013+0000] {logging_mixin.py:151} INFO - Error while geocoding Olympic Stadium, Greece: Task received SIGTERM signal
+[2024-11-18T09:10:46.046+0000] {process_utils.py:149} WARNING - process psutil.Process(pid=166, name='airflow task runner: wikipedia_flow transform_wikipedia_data manual__2024-11-18T09:07:10.029629+00:00 10', status='sleeping', started='09:07:14') did not respond to SIGTERM. Trying SIGKILL
+[2024-11-18T09:10:46.060+0000] {process_utils.py:86} INFO - Sending the signal 9 to group 166
+[2024-11-18T09:10:46.082+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=166, name='airflow task runner: wikipedia_flow transform_wikipedia_data manual__2024-11-18T09:07:10.029629+00:00 10', status='terminated', exitcode=<Negsignal.SIGKILL: -9>, started='09:07:14') (166) terminated with exit code -9
+[2024-11-18T09:10:46.084+0000] {standard_task_runner.py:172} ERROR - Job 10 was killed before it finished (likely due to running out of memory)

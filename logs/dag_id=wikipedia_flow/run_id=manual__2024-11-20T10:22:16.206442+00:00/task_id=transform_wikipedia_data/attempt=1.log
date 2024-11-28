@@ -1,0 +1,31 @@
+[2024-11-20T10:22:21.063+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: wikipedia_flow.transform_wikipedia_data manual__2024-11-20T10:22:16.206442+00:00 [queued]>
+[2024-11-20T10:22:21.066+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: wikipedia_flow.transform_wikipedia_data manual__2024-11-20T10:22:16.206442+00:00 [queued]>
+[2024-11-20T10:22:21.067+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 1
+[2024-11-20T10:22:21.072+0000] {taskinstance.py:1380} INFO - Executing <Task(PythonOperator): transform_wikipedia_data> on 2024-11-20 10:22:16.206442+00:00
+[2024-11-20T10:22:21.075+0000] {standard_task_runner.py:57} INFO - Started process 574 to run task
+[2024-11-20T10:22:21.076+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'wikipedia_flow', 'transform_wikipedia_data', 'manual__2024-11-20T10:22:16.206442+00:00', '--job-id', '10', '--raw', '--subdir', 'DAGS_FOLDER/wikipedia.py', '--cfg-path', '/tmp/tmp8vmxrlq7']
+[2024-11-20T10:22:21.078+0000] {standard_task_runner.py:85} INFO - Job 10: Subtask transform_wikipedia_data
+[2024-11-20T10:22:21.104+0000] {task_command.py:415} INFO - Running <TaskInstance: wikipedia_flow.transform_wikipedia_data manual__2024-11-20T10:22:16.206442+00:00 [running]> on host scheduler
+[2024-11-20T10:22:21.222+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='ClarkSon Tech' AIRFLOW_CTX_DAG_ID='wikipedia_flow' AIRFLOW_CTX_TASK_ID='transform_wikipedia_data' AIRFLOW_CTX_EXECUTION_DATE='2024-11-20T10:22:16.206442+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-11-20T10:22:16.206442+00:00'
+[2024-11-20T10:22:21.231+0000] {logging_mixin.py:151} INFO - Initial DataFrame:
+[2024-11-20T10:22:21.236+0000] {logging_mixin.py:151} INFO -     rank  ...                                          home_team
+0     1  ...  Korea DPR national football team, Korea DPR wo...
+1     2  ...                       Michigan Wolverines football
+2     3  ...                       Ohio State Buckeyes football
+3     4  ...  Australia national cricket team, Victoria cric...
+4     5  ...                                       FC Barcelona
+
+[5 rows x 8 columns]
+[2024-11-20T10:22:51.973+0000] {connectionpool.py:871} WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff776cf820>: Failed to establish a new connection: [Errno 101] Network is unreachable')': /search?q=Buenos+Aires%2C+Argentina&format=json&limit=1
+[2024-11-20T10:23:29.992+0000] {connectionpool.py:871} WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Read timed out. (read timeout=1)")': /search?q=Nairobi%2C+Kenya&format=json&limit=1
+[2024-11-20T10:24:14.383+0000] {connectionpool.py:871} WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Read timed out. (read timeout=1)")': /search?q=Yokohama%2C+Kanagawa%2C+Japan&format=json&limit=1
+[2024-11-20T10:26:05.960+0000] {connectionpool.py:871} WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Read timed out. (read timeout=1)")': /search?q=Chicago%2C+United+States&format=json&limit=1
+[2024-11-20T10:26:24.569+0000] {connectionpool.py:871} WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Read timed out. (read timeout=1)")': /search?q=London%2C+England&format=json&limit=1
+[2024-11-20T10:29:50.377+0000] {local_task_job_runner.py:294} WARNING - State of this instance has been externally set to failed. Terminating instance.
+[2024-11-20T10:29:50.388+0000] {process_utils.py:131} INFO - Sending 15 to group 574. PIDs of all processes in the group: [574]
+[2024-11-20T10:29:50.388+0000] {process_utils.py:86} INFO - Sending the signal 15 to group 574
+[2024-11-20T10:29:50.389+0000] {taskinstance.py:1630} ERROR - Received SIGTERM. Terminating subprocesses.
+[2024-11-20T10:29:50.394+0000] {logging_mixin.py:151} INFO - An error occurred during transformation: Task received SIGTERM signal
+[2024-11-20T10:29:50.395+0000] {python.py:194} INFO - Done. Returned value was: Transformation failed
+[2024-11-20T10:29:50.438+0000] {taskinstance.py:1398} INFO - Marking task as SUCCESS. dag_id=wikipedia_flow, task_id=transform_wikipedia_data, execution_date=20241120T102216, start_date=20241120T102221, end_date=20241120T102950
+[2024-11-20T10:29:50.491+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=574, status='terminated', exitcode=0, started='10:22:21') (574) terminated with exit code 0

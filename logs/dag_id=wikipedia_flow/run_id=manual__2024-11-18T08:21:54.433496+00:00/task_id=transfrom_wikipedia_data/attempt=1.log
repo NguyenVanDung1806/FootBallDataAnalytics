@@ -1,0 +1,75 @@
+[2024-11-18T08:21:59.229+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: wikipedia_flow.transfrom_wikipedia_data manual__2024-11-18T08:21:54.433496+00:00 [queued]>
+[2024-11-18T08:21:59.233+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: wikipedia_flow.transfrom_wikipedia_data manual__2024-11-18T08:21:54.433496+00:00 [queued]>
+[2024-11-18T08:21:59.234+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 1
+[2024-11-18T08:21:59.240+0000] {taskinstance.py:1380} INFO - Executing <Task(PythonOperator): transfrom_wikipedia_data> on 2024-11-18 08:21:54.433496+00:00
+[2024-11-18T08:21:59.242+0000] {standard_task_runner.py:57} INFO - Started process 1025 to run task
+[2024-11-18T08:21:59.244+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'wikipedia_flow', 'transfrom_wikipedia_data', 'manual__2024-11-18T08:21:54.433496+00:00', '--job-id', '11', '--raw', '--subdir', 'DAGS_FOLDER/wikipedia.py', '--cfg-path', '/tmp/tmpq4kx0dvu']
+[2024-11-18T08:21:59.245+0000] {standard_task_runner.py:85} INFO - Job 11: Subtask transfrom_wikipedia_data
+[2024-11-18T08:21:59.273+0000] {task_command.py:415} INFO - Running <TaskInstance: wikipedia_flow.transfrom_wikipedia_data manual__2024-11-18T08:21:54.433496+00:00 [running]> on host scheduler
+[2024-11-18T08:21:59.387+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Clarkson' AIRFLOW_CTX_DAG_ID='wikipedia_flow' AIRFLOW_CTX_TASK_ID='transfrom_wikipedia_data' AIRFLOW_CTX_EXECUTION_DATE='2024-11-18T08:21:54.433496+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-11-18T08:21:54.433496+00:00'
+[2024-11-18T08:22:00.335+0000] {base.py:396} INFO - Received an HTTP error (403): <html>
+<head>
+<title>Access blocked</title>
+</head>
+<body>
+<h1>Access blocked</h1>
+
+<p>You have been blocked because you have violated the
+<a href="https://operations.osmfoundation.org/policies/nominatim/">usage policy</a>
+of OSM's Nominatim geocoding service. Please be aware that OSM's resources are
+limited and shared between many users. The usage policy is there to ensure that
+the service remains usable for everybody.</p>
+
+<p>Please review the terms and make sure that your
+software adheres to the terms. You should in particular verify that you have set a
+<b>custom HTTP referrer or HTTP user agent</b> that identifies your application, and
+that you are not overusing the service with massive bulk requests.</p>
+
+<p>If you feel that this block is unjustified or remains after you have adopted
+your usage, you may contact the Nominatim system administrator at
+nominatim@openstreetmap.org to have this block lifted.</p>
+</body>
+</head>
+
+[2024-11-18T08:22:00.336+0000] {taskinstance.py:1935} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/geopy/geocoders/base.py", line 368, in _call_geocoder
+    result = self.adapter.get_json(url, timeout=timeout, headers=req_headers)
+  File "/home/airflow/.local/lib/python3.9/site-packages/geopy/adapters.py", line 472, in get_json
+    resp = self._request(url, timeout=timeout, headers=headers)
+  File "/home/airflow/.local/lib/python3.9/site-packages/geopy/adapters.py", line 500, in _request
+    raise AdapterHTTPError(
+geopy.adapters.AdapterHTTPError: Non-successful status code 403
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/operators/python.py", line 192, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/operators/python.py", line 209, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/pipelines/wikipedia_pipeline.py", line 80, in transform_wikipedia_data
+    stadiums_df['location'] = stadiums_df.apply(lambda x: get_lat_long(x['country'], x['stadium']), axis=1)
+  File "/home/airflow/.local/lib/python3.9/site-packages/pandas/core/frame.py", line 10037, in apply
+    return op.apply().__finalize__(self, method="apply")
+  File "/home/airflow/.local/lib/python3.9/site-packages/pandas/core/apply.py", line 837, in apply
+    return self.apply_standard()
+  File "/home/airflow/.local/lib/python3.9/site-packages/pandas/core/apply.py", line 963, in apply_standard
+    results, res_index = self.apply_series_generator()
+  File "/home/airflow/.local/lib/python3.9/site-packages/pandas/core/apply.py", line 979, in apply_series_generator
+    results[i] = self.func(v, *self.args, **self.kwargs)
+  File "/opt/airflow/pipelines/wikipedia_pipeline.py", line 80, in <lambda>
+    stadiums_df['location'] = stadiums_df.apply(lambda x: get_lat_long(x['country'], x['stadium']), axis=1)
+  File "/opt/airflow/pipelines/wikipedia_pipeline.py", line 101, in get_lat_long
+    location = geolocator.geocode(f'{city}, {country}')
+  File "/home/airflow/.local/lib/python3.9/site-packages/geopy/geocoders/nominatim.py", line 297, in geocode
+    return self._call_geocoder(url, callback, timeout=timeout)
+  File "/home/airflow/.local/lib/python3.9/site-packages/geopy/geocoders/base.py", line 388, in _call_geocoder
+    res = self._adapter_error_handler(error)
+  File "/home/airflow/.local/lib/python3.9/site-packages/geopy/geocoders/base.py", line 411, in _adapter_error_handler
+    raise exc_cls(str(error)) from error
+geopy.exc.GeocoderInsufficientPrivileges: Non-successful status code 403
+[2024-11-18T08:22:00.346+0000] {taskinstance.py:1398} INFO - Marking task as FAILED. dag_id=wikipedia_flow, task_id=transfrom_wikipedia_data, execution_date=20241118T082154, start_date=20241118T082159, end_date=20241118T082200
+[2024-11-18T08:22:00.354+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 11 for task transfrom_wikipedia_data (Non-successful status code 403; 1025)
+[2024-11-18T08:22:00.401+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2024-11-18T08:22:00.416+0000] {taskinstance.py:2776} INFO - 0 downstream tasks scheduled from follow-on schedule check

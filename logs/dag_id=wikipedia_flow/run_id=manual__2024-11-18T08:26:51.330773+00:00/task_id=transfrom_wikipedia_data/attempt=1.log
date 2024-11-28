@@ -1,0 +1,771 @@
+[2024-11-18T08:26:55.716+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: wikipedia_flow.transfrom_wikipedia_data manual__2024-11-18T08:26:51.330773+00:00 [queued]>
+[2024-11-18T08:26:55.720+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: wikipedia_flow.transfrom_wikipedia_data manual__2024-11-18T08:26:51.330773+00:00 [queued]>
+[2024-11-18T08:26:55.720+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 1
+[2024-11-18T08:26:55.725+0000] {taskinstance.py:1380} INFO - Executing <Task(PythonOperator): transfrom_wikipedia_data> on 2024-11-18 08:26:51.330773+00:00
+[2024-11-18T08:26:55.728+0000] {standard_task_runner.py:57} INFO - Started process 1119 to run task
+[2024-11-18T08:26:55.729+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'wikipedia_flow', 'transfrom_wikipedia_data', 'manual__2024-11-18T08:26:51.330773+00:00', '--job-id', '13', '--raw', '--subdir', 'DAGS_FOLDER/wikipedia.py', '--cfg-path', '/tmp/tmpcvmuw5zr']
+[2024-11-18T08:26:55.731+0000] {standard_task_runner.py:85} INFO - Job 13: Subtask transfrom_wikipedia_data
+[2024-11-18T08:26:55.755+0000] {task_command.py:415} INFO - Running <TaskInstance: wikipedia_flow.transfrom_wikipedia_data manual__2024-11-18T08:26:51.330773+00:00 [running]> on host scheduler
+[2024-11-18T08:26:55.865+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Clarkson' AIRFLOW_CTX_DAG_ID='wikipedia_flow' AIRFLOW_CTX_TASK_ID='transfrom_wikipedia_data' AIRFLOW_CTX_EXECUTION_DATE='2024-11-18T08:26:51.330773+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-11-18T08:26:51.330773+00:00'
+[2024-11-18T08:26:55.875+0000] {logging_mixin.py:151} INFO - Error while geocoding Rungrado 1st of May Stadium, North Korea: 'module' object is not callable
+[2024-11-18T08:26:55.875+0000] {logging_mixin.py:151} INFO - Error while geocoding Michigan Stadium, United States: 'module' object is not callable
+[2024-11-18T08:26:55.875+0000] {logging_mixin.py:151} INFO - Error while geocoding Ohio Stadium, United States: 'module' object is not callable
+[2024-11-18T08:26:55.876+0000] {logging_mixin.py:151} INFO - Error while geocoding Melbourne Cricket Ground, Australia: 'module' object is not callable
+[2024-11-18T08:26:55.876+0000] {logging_mixin.py:151} INFO - Error while geocoding Camp Nou, Spain: 'module' object is not callable
+[2024-11-18T08:26:55.876+0000] {logging_mixin.py:151} INFO - Error while geocoding Estadio Azteca, Mexico: 'module' object is not callable
+[2024-11-18T08:26:55.876+0000] {logging_mixin.py:151} INFO - Error while geocoding FNB Stadium, South Africa: 'module' object is not callable
+[2024-11-18T08:26:55.876+0000] {logging_mixin.py:151} INFO - Error while geocoding New Administrative Capital Stadium, Egypt: 'module' object is not callable
+[2024-11-18T08:26:55.876+0000] {logging_mixin.py:151} INFO - Error while geocoding Rose Bowl Stadium, United States: 'module' object is not callable
+[2024-11-18T08:26:55.876+0000] {logging_mixin.py:151} INFO - Error while geocoding Cotton Bowl Stadium, United States: 'module' object is not callable
+[2024-11-18T08:26:55.877+0000] {logging_mixin.py:151} INFO - Error while geocoding Wembley Stadium, England: 'module' object is not callable
+[2024-11-18T08:26:55.877+0000] {logging_mixin.py:151} INFO - Error while geocoding Lusail Stadium, Qatar: 'module' object is not callable
+[2024-11-18T08:26:55.877+0000] {logging_mixin.py:151} INFO - Error while geocoding Bukit Jalil National Stadium, Malaysia: 'module' object is not callable
+[2024-11-18T08:26:55.877+0000] {logging_mixin.py:151} INFO - Error while geocoding Borg el-Arab Stadium, Egypt: 'module' object is not callable
+[2024-11-18T08:26:55.877+0000] {logging_mixin.py:151} INFO - Error while geocoding Estadio Santiago Bernabéu, Spain: 'module' object is not callable
+[2024-11-18T08:26:55.877+0000] {logging_mixin.py:151} INFO - Error while geocoding Estadio Mâs Monumental, Argentina: 'module' object is not callable
+[2024-11-18T08:26:55.877+0000] {logging_mixin.py:151} INFO - Error while geocoding Stadium Australia, Australia: 'module' object is not callable
+[2024-11-18T08:26:55.877+0000] {logging_mixin.py:151} INFO - Error while geocoding MetLife Stadium, United States: 'module' object is not callable
+[2024-11-18T08:26:55.878+0000] {logging_mixin.py:151} INFO - Error while geocoding Croke Park, Ireland: 'module' object is not callable
+[2024-11-18T08:26:55.878+0000] {logging_mixin.py:151} INFO - Error while geocoding Jakarta International Stadium, Indonesia: 'module' object is not callable
+[2024-11-18T08:26:55.878+0000] {logging_mixin.py:151} INFO - Error while geocoding Lambeau Field, United States: 'module' object is not callable
+[2024-11-18T08:26:55.878+0000] {logging_mixin.py:151} INFO - Error while geocoding Signal Iduna Park, Germany: 'module' object is not callable
+[2024-11-18T08:26:55.878+0000] {logging_mixin.py:151} INFO - Error while geocoding Stade de France, France: 'module' object is not callable
+[2024-11-18T08:26:55.878+0000] {logging_mixin.py:151} INFO - Error while geocoding Grand Sports Arena of the Luzhniki Olympic Complex, Russia: 'module' object is not callable
+[2024-11-18T08:26:55.878+0000] {logging_mixin.py:151} INFO - Error while geocoding Shah Alam Stadium, Malaysia: 'module' object is not callable
+[2024-11-18T08:26:55.878+0000] {logging_mixin.py:151} INFO - Error while geocoding Estadio Monumental, Peru: 'module' object is not callable
+[2024-11-18T08:26:55.879+0000] {logging_mixin.py:151} INFO - Error while geocoding Stadio Giuseppe Meazza, Italy: 'module' object is not callable
+[2024-11-18T08:26:55.879+0000] {logging_mixin.py:151} INFO - Error while geocoding Guangdong Olympic Stadium, China: 'module' object is not callable
+[2024-11-18T08:26:55.879+0000] {logging_mixin.py:151} INFO - Error while geocoding Hangzhou Olympic Sports Expo Centre Stadium, China: 'module' object is not callable
+[2024-11-18T08:26:55.879+0000] {logging_mixin.py:151} INFO - Error while geocoding AT&T Stadium, United States: 'module' object is not callable
+[2024-11-18T08:26:55.879+0000] {logging_mixin.py:151} INFO - Error while geocoding Stade des Martyrs, DR Congo: 'module' object is not callable
+[2024-11-18T08:26:55.879+0000] {logging_mixin.py:151} INFO - Error while geocoding Stade Tata Raphaël, DR Congo: 'module' object is not callable
+[2024-11-18T08:26:55.879+0000] {logging_mixin.py:151} INFO - Error while geocoding National Sports Stadium, Zimbabwe: 'module' object is not callable
+[2024-11-18T08:26:55.879+0000] {logging_mixin.py:151} INFO - Error while geocoding Moi International Sports Centre, Kenya: 'module' object is not callable
+[2024-11-18T08:26:55.880+0000] {logging_mixin.py:151} INFO - Error while geocoding Beijing National Stadium, China: 'module' object is not callable
+[2024-11-18T08:26:55.880+0000] {logging_mixin.py:151} INFO - Error while geocoding Stade Léopold Sédar Senghor, Senegal: 'module' object is not callable
+[2024-11-18T08:26:55.880+0000] {logging_mixin.py:151} INFO - Error while geocoding Maracanã, Brazil: 'module' object is not callable
+[2024-11-18T08:26:55.880+0000] {logging_mixin.py:151} INFO - Error while geocoding Los Angeles Memorial Coliseum, United States: 'module' object is not callable
+[2024-11-18T08:26:55.880+0000] {logging_mixin.py:151} INFO - Error while geocoding Azadi Stadium, Iran: 'module' object is not callable
+[2024-11-18T08:26:55.880+0000] {logging_mixin.py:151} INFO - Error while geocoding Stadion Utama Gelora Bung Karno, Indonesia: 'module' object is not callable
+[2024-11-18T08:26:55.880+0000] {logging_mixin.py:151} INFO - Error while geocoding Caesar's Superdome, United States: 'module' object is not callable
+[2024-11-18T08:26:55.880+0000] {logging_mixin.py:151} INFO - Error while geocoding Arrowhead Stadium, United States: 'module' object is not callable
+[2024-11-18T08:26:55.881+0000] {logging_mixin.py:151} INFO - Error while geocoding Empower Field, United States: 'module' object is not callable
+[2024-11-18T08:26:55.881+0000] {logging_mixin.py:151} INFO - Error while geocoding Atatürk Olimpiyat Stadyumu, Turkey: 'module' object is not callable
+[2024-11-18T08:26:55.881+0000] {logging_mixin.py:151} INFO - Error while geocoding Old Trafford, England: 'module' object is not callable
+[2024-11-18T08:26:55.881+0000] {logging_mixin.py:151} INFO - Error while geocoding Allianz Arena, Germany: 'module' object is not callable
+[2024-11-18T08:26:55.881+0000] {logging_mixin.py:151} INFO - Error while geocoding Naghsh-e-Jahan Stadium, Iran: 'module' object is not callable
+[2024-11-18T08:26:55.881+0000] {logging_mixin.py:151} INFO - Error while geocoding Bank of America Stadium, United States: 'module' object is not callable
+[2024-11-18T08:26:55.881+0000] {logging_mixin.py:151} INFO - Error while geocoding Principality Stadium, Wales: 'module' object is not callable
+[2024-11-18T08:26:55.881+0000] {logging_mixin.py:151} INFO - Error while geocoding Olympiastadion, Germany: 'module' object is not callable
+[2024-11-18T08:26:55.882+0000] {logging_mixin.py:151} INFO - Error while geocoding Cairo International Stadium, Egypt: 'module' object is not callable
+[2024-11-18T08:26:55.882+0000] {logging_mixin.py:151} INFO - Error while geocoding FirstEnergy Stadium, United States: 'module' object is not callable
+[2024-11-18T08:26:55.882+0000] {logging_mixin.py:151} INFO - Error while geocoding Estádio Nacional Mané Garrincha, Brazil: 'module' object is not callable
+[2024-11-18T08:26:55.882+0000] {logging_mixin.py:151} INFO - Error while geocoding Stadio Olimpico, Italy: 'module' object is not callable
+[2024-11-18T08:26:55.882+0000] {logging_mixin.py:151} INFO - Error while geocoding Nissan Stadium, Japan: 'module' object is not callable
+[2024-11-18T08:26:55.882+0000] {logging_mixin.py:151} INFO - Error while geocoding NRG Stadium, United States: 'module' object is not callable
+[2024-11-18T08:26:55.882+0000] {logging_mixin.py:151} INFO - Error while geocoding Shanghai Stadium, China: 'module' object is not callable
+[2024-11-18T08:26:55.882+0000] {logging_mixin.py:151} INFO - Error while geocoding M&T Bank Stadium, United States: 'module' object is not callable
+[2024-11-18T08:26:55.883+0000] {logging_mixin.py:151} INFO - Error while geocoding Mercedes-Benz Stadium, United States: 'module' object is not callable
+[2024-11-18T08:26:55.883+0000] {logging_mixin.py:151} INFO - Error while geocoding Cívitas Metropolitano, Spain: 'module' object is not callable
+[2024-11-18T08:26:55.883+0000] {logging_mixin.py:151} INFO - Error while geocoding Olympic National Sports Complex Stadium, Ukraine: 'module' object is not callable
+[2024-11-18T08:26:55.883+0000] {logging_mixin.py:151} INFO - Error while geocoding SoFi Stadium, United States: 'module' object is not callable
+[2024-11-18T08:26:55.883+0000] {logging_mixin.py:151} INFO - Error while geocoding Seoul Olympic Stadium, South Korea: 'module' object is not callable
+[2024-11-18T08:26:55.883+0000] {logging_mixin.py:151} INFO - Error while geocoding Bakı Olimpiya stadionu, Azerbaijan: 'module' object is not callable
+[2024-11-18T08:26:55.883+0000] {logging_mixin.py:151} INFO - Error while geocoding Olympic Stadium, Greece: 'module' object is not callable
+[2024-11-18T08:26:55.883+0000] {logging_mixin.py:151} INFO - Error while geocoding Olympiastadion München, Germany: 'module' object is not callable
+[2024-11-18T08:26:55.884+0000] {logging_mixin.py:151} INFO - Error while geocoding Lumen Field, United States: 'module' object is not callable
+[2024-11-18T08:26:55.884+0000] {logging_mixin.py:151} INFO - Error while geocoding Estadio Olímpico Universitario, Mexico: 'module' object is not callable
+[2024-11-18T08:26:55.884+0000] {logging_mixin.py:151} INFO - Error while geocoding Gillette Stadium, United States: 'module' object is not callable
+[2024-11-18T08:26:55.884+0000] {logging_mixin.py:151} INFO - Error while geocoding King Abdullah Sports City Stadium, Saudi Arabia: 'module' object is not callable
+[2024-11-18T08:26:55.884+0000] {logging_mixin.py:151} INFO - Error while geocoding Lincoln Financial Field, United States: 'module' object is not callable
+[2024-11-18T08:26:55.884+0000] {logging_mixin.py:151} INFO - Error while geocoding Levi's Stadium, United States: 'module' object is not callable
+[2024-11-18T08:26:55.884+0000] {logging_mixin.py:151} INFO - Error while geocoding Acrisure Stadium, United States: 'module' object is not callable
+[2024-11-18T08:26:55.884+0000] {logging_mixin.py:151} INFO - Error while geocoding Gazprom Arena, Russia: 'module' object is not callable
+[2024-11-18T08:26:55.885+0000] {logging_mixin.py:151} INFO - Error while geocoding Salt Lake Stadium, India: 'module' object is not callable
+[2024-11-18T08:26:55.885+0000] {logging_mixin.py:151} INFO - Error while geocoding National Stadium, Japan: 'module' object is not callable
+[2024-11-18T08:26:55.885+0000] {logging_mixin.py:151} INFO - Error while geocoding TIAA Bank Field, United States: 'module' object is not callable
+[2024-11-18T08:26:55.885+0000] {logging_mixin.py:151} INFO - Error while geocoding Orange Vélodrome, France: 'module' object is not callable
+[2024-11-18T08:26:55.885+0000] {logging_mixin.py:151} INFO - Error while geocoding Puskás Aréna, Hungary: 'module' object is not callable
+[2024-11-18T08:26:55.885+0000] {logging_mixin.py:151} INFO - Error while geocoding Scottish Gas Murrayfield Stadium, Scotland: 'module' object is not callable
+[2024-11-18T08:26:55.885+0000] {logging_mixin.py:151} INFO - Error while geocoding Lucas Oil Stadium, United States: 'module' object is not callable
+[2024-11-18T08:26:55.885+0000] {logging_mixin.py:151} INFO - Error while geocoding MorumBIS, Brazil: 'module' object is not callable
+[2024-11-18T08:26:55.885+0000] {logging_mixin.py:151} INFO - Error while geocoding The Dome, United States: 'module' object is not callable
+[2024-11-18T08:26:55.886+0000] {logging_mixin.py:151} INFO - Error while geocoding Yadegar-e-Emam Stadium, Iran: 'module' object is not callable
+[2024-11-18T08:26:55.886+0000] {logging_mixin.py:151} INFO - Error while geocoding Seoul World Cup Stadium, South Korea: 'module' object is not callable
+[2024-11-18T08:26:55.886+0000] {logging_mixin.py:151} INFO - Error while geocoding US Bank Stadium, United States: 'module' object is not callable
+[2024-11-18T08:26:55.886+0000] {logging_mixin.py:151} INFO - Error while geocoding Daegu Stadium, South Korea: 'module' object is not callable
+[2024-11-18T08:26:55.886+0000] {logging_mixin.py:151} INFO - Error while geocoding Workers' Stadium, China: 'module' object is not callable
+[2024-11-18T08:26:55.886+0000] {logging_mixin.py:151} INFO - Error while geocoding London Stadium, England: 'module' object is not callable
+[2024-11-18T08:26:55.886+0000] {logging_mixin.py:151} INFO - Error while geocoding Raymond James Stadium, United States: 'module' object is not callable
+[2024-11-18T08:26:55.886+0000] {logging_mixin.py:151} INFO - Error while geocoding Hard Rock Stadium, United States: 'module' object is not callable
+[2024-11-18T08:26:55.887+0000] {logging_mixin.py:151} INFO - Error while geocoding Olympic Stadium, Canada: 'module' object is not callable
+[2024-11-18T08:26:55.887+0000] {logging_mixin.py:151} INFO - Error while geocoding Basra International Stadium, Iraq: 'module' object is not callable
+[2024-11-18T08:26:55.887+0000] {logging_mixin.py:151} INFO - Error while geocoding Camping World Stadium, United States: 'module' object is not callable
+[2024-11-18T08:26:55.887+0000] {logging_mixin.py:151} INFO - Error while geocoding Alamodome, United States: 'module' object is not callable
+[2024-11-18T08:26:55.887+0000] {logging_mixin.py:151} INFO - Error while geocoding Ford Field, United States: 'module' object is not callable
+[2024-11-18T08:26:55.887+0000] {logging_mixin.py:151} INFO - Error while geocoding Stade Ibn Battuta, Morocco: 'module' object is not callable
+[2024-11-18T08:26:55.887+0000] {logging_mixin.py:151} INFO - Error while geocoding Estádio do Sport Lisboa e Benfica, Portugal: 'module' object is not callable
+[2024-11-18T08:26:55.887+0000] {logging_mixin.py:151} INFO - Error while geocoding Stade du 5-juillet-1962, Algeria: 'module' object is not callable
+[2024-11-18T08:26:55.888+0000] {logging_mixin.py:151} INFO - Error while geocoding Castelão, Brazil: 'module' object is not callable
+[2024-11-18T08:26:55.888+0000] {logging_mixin.py:151} INFO - Error while geocoding Saitama Stadium 2002, Japan: 'module' object is not callable
+[2024-11-18T08:26:55.888+0000] {logging_mixin.py:151} INFO - Error while geocoding Ellis Park Stadium, South Africa: 'module' object is not callable
+[2024-11-18T08:26:55.888+0000] {logging_mixin.py:151} INFO - Error while geocoding Tottenham Hotspur Stadium, England: 'module' object is not callable
+[2024-11-18T08:26:55.888+0000] {logging_mixin.py:151} INFO - Error while geocoding VELTINS-Arena, Germany: 'module' object is not callable
+[2024-11-18T08:26:55.888+0000] {logging_mixin.py:151} INFO - Error while geocoding Yizhong Sports Centre Stadium, China: 'module' object is not callable
+[2024-11-18T08:26:55.888+0000] {logging_mixin.py:151} INFO - Error while geocoding Estádio Governador Magalhães Pinto, Brazil: 'module' object is not callable
+[2024-11-18T08:26:55.888+0000] {logging_mixin.py:151} INFO - Error while geocoding King Fahd International Stadium, Saudi Arabia: 'module' object is not callable
+[2024-11-18T08:26:55.888+0000] {logging_mixin.py:151} INFO - Error while geocoding Soldier Field, United States: 'module' object is not callable
+[2024-11-18T08:26:55.888+0000] {logging_mixin.py:151} INFO - Error while geocoding Nanjing Olympic Sports Centre Stadium, China: 'module' object is not callable
+[2024-11-18T08:26:55.889+0000] {logging_mixin.py:151} INFO - Error while geocoding Anfield, England: 'module' object is not callable
+[2024-11-18T08:26:55.889+0000] {logging_mixin.py:151} INFO - Error while geocoding Estadio Benito Villamarín, Spain: 'module' object is not callable
+[2024-11-18T08:26:55.889+0000] {logging_mixin.py:151} INFO - Error while geocoding Abuja Stadium, Nigeria: 'module' object is not callable
+[2024-11-18T08:26:55.889+0000] {logging_mixin.py:151} INFO - Error while geocoding MHPArena, Germany: 'module' object is not callable
+[2024-11-18T08:26:55.889+0000] {logging_mixin.py:151} INFO - Error while geocoding Celtic Park, Scotland: 'module' object is not callable
+[2024-11-18T08:26:55.889+0000] {logging_mixin.py:151} INFO - Error while geocoding Estadio de la UNSA, Peru: 'module' object is not callable
+[2024-11-18T08:26:55.889+0000] {logging_mixin.py:151} INFO - Error while geocoding Emirates Stadium, England: 'module' object is not callable
+[2024-11-18T08:26:55.889+0000] {logging_mixin.py:151} INFO - Error while geocoding Shenzhen Universiade Sports Centre Stadium, China: 'module' object is not callable
+[2024-11-18T08:26:55.890+0000] {logging_mixin.py:151} INFO - Error while geocoding Estadio Centenario, Uruguay: 'module' object is not callable
+[2024-11-18T08:26:55.890+0000] {logging_mixin.py:151} INFO - Error while geocoding Estádio José do Rego Maciel, Brazil: 'module' object is not callable
+[2024-11-18T08:26:55.890+0000] {logging_mixin.py:151} INFO - Error while geocoding Al-Bayt Stadium, Qatar: 'module' object is not callable
+[2024-11-18T08:26:55.890+0000] {logging_mixin.py:151} INFO - Error while geocoding Benjamin Mkapa National Stadium, Tanzania: 'module' object is not callable
+[2024-11-18T08:26:55.890+0000] {logging_mixin.py:151} INFO - Error while geocoding Hefei Olympic Sports Centre Stadium, China: 'module' object is not callable
+[2024-11-18T08:26:55.890+0000] {logging_mixin.py:151} INFO - Error while geocoding Jaber al-Ahmad International Stadium, Kuwait: 'module' object is not callable
+[2024-11-18T08:26:55.890+0000] {logging_mixin.py:151} INFO - Error while geocoding Hammadi Agrebi Stadium, Tunisia: 'module' object is not callable
+[2024-11-18T08:26:55.890+0000] {logging_mixin.py:151} INFO - Error while geocoding Jawaharlal Nehru Stadium, India: 'module' object is not callable
+[2024-11-18T08:26:55.891+0000] {logging_mixin.py:151} INFO - Error while geocoding Mogadishu Stadium, Somalia: 'module' object is not callable
+[2024-11-18T08:26:55.891+0000] {logging_mixin.py:151} INFO - Error while geocoding National Heroes Stadium, Zambia: 'module' object is not callable
+[2024-11-18T08:26:55.891+0000] {logging_mixin.py:151} INFO - Error while geocoding Autzen Stadium, United States: 'module' object is not callable
+[2024-11-18T08:26:55.891+0000] {logging_mixin.py:151} INFO - Error while geocoding Odi Stadium, South Africa: 'module' object is not callable
+[2024-11-18T08:26:55.891+0000] {logging_mixin.py:151} INFO - Error while geocoding Morodok Techo National Stadium, Cambodia: 'module' object is not callable
+[2024-11-18T08:26:55.891+0000] {logging_mixin.py:151} INFO - Error while geocoding Shenyang Olympic Sports Centre Stadium, China: 'module' object is not callable
+[2024-11-18T08:26:55.891+0000] {logging_mixin.py:151} INFO - Error while geocoding Optus Stadium, Australia: 'module' object is not callable
+[2024-11-18T08:26:55.891+0000] {logging_mixin.py:151} INFO - Error while geocoding Estadio Monumental Isidro Romero Carbo, Ecuador: 'module' object is not callable
+[2024-11-18T08:26:55.891+0000] {logging_mixin.py:151} INFO - Error while geocoding Groupama Stadium, France: 'module' object is not callable
+[2024-11-18T08:26:55.891+0000] {logging_mixin.py:151} INFO - Error while geocoding Chongqing Olympic Sports Centre Stadium, China: 'module' object is not callable
+[2024-11-18T08:26:55.892+0000] {logging_mixin.py:151} INFO - Error while geocoding Kazimierz Górski National Stadium, Poland: 'module' object is not callable
+[2024-11-18T08:26:55.892+0000] {logging_mixin.py:151} INFO - Error while geocoding Stadio San Nicola, Italy: 'module' object is not callable
+[2024-11-18T08:26:55.892+0000] {logging_mixin.py:151} INFO - Error while geocoding Commanders Field, United States: 'module' object is not callable
+[2024-11-18T08:26:55.892+0000] {logging_mixin.py:151} INFO - Error while geocoding Deutsche Bank Park, Germany: 'module' object is not callable
+[2024-11-18T08:26:55.892+0000] {logging_mixin.py:151} INFO - Error while geocoding Estadio La Cartuja de Sevilla, Spain: 'module' object is not callable
+[2024-11-18T08:26:55.892+0000] {logging_mixin.py:151} INFO - Error while geocoding Carter–Finley Stadium, United States: 'module' object is not callable
+[2024-11-18T08:26:55.892+0000] {logging_mixin.py:151} INFO - Error while geocoding Estadio Alberto J. Armando, Argentina: 'module' object is not callable
+[2024-11-18T08:26:55.892+0000] {logging_mixin.py:151} INFO - Error while geocoding Volksparkstadion, Germany: 'module' object is not callable
+[2024-11-18T08:26:55.893+0000] {logging_mixin.py:151} INFO - Error while geocoding Estadio Mario Alberto Kempes, Argentina: 'module' object is not callable
+[2024-11-18T08:26:55.893+0000] {logging_mixin.py:151} INFO - Error while geocoding Jinan Olympic Sports Centre Stadium, China: 'module' object is not callable
+[2024-11-18T08:26:55.893+0000] {logging_mixin.py:151} INFO - Error while geocoding Estadio Jalisco, Mexico: 'module' object is not callable
+[2024-11-18T08:26:55.893+0000] {logging_mixin.py:151} INFO - Error while geocoding Commonwealth Stadium, Canada: 'module' object is not callable
+[2024-11-18T08:26:55.893+0000] {logging_mixin.py:151} INFO - Error while geocoding Dodger Stadium, United States: 'module' object is not callable
+[2024-11-18T08:26:55.893+0000] {logging_mixin.py:151} INFO - Error while geocoding Stade du 19-mai-1956, Algeria: 'module' object is not callable
+[2024-11-18T08:26:55.893+0000] {logging_mixin.py:151} INFO - Error while geocoding Estadi Olímpic Lluís Companys, Spain: 'module' object is not callable
+[2024-11-18T08:26:55.893+0000] {logging_mixin.py:151} INFO - Error while geocoding Arena do Grêmio, Brazil: 'module' object is not callable
+[2024-11-18T08:26:55.893+0000] {logging_mixin.py:151} INFO - Error while geocoding Arena Națională, Romania: 'module' object is not callable
+[2024-11-18T08:26:55.894+0000] {logging_mixin.py:151} INFO - Error while geocoding Stadion Rajko Mitić, Serbia: 'module' object is not callable
+[2024-11-18T08:26:55.894+0000] {logging_mixin.py:151} INFO - Error while geocoding Stadion Śląski, Poland: 'module' object is not callable
+[2024-11-18T08:26:55.894+0000] {logging_mixin.py:151} INFO - Error while geocoding Etihad Stadium, England: 'module' object is not callable
+[2024-11-18T08:26:55.894+0000] {logging_mixin.py:151} INFO - Error while geocoding Mestalla, Spain: 'module' object is not callable
+[2024-11-18T08:26:55.895+0000] {logging_mixin.py:151} INFO - Error while geocoding National Stadium, Singapore: 'module' object is not callable
+[2024-11-18T08:26:55.895+0000] {logging_mixin.py:151} INFO - Error while geocoding National Stadium, Taiwan: 'module' object is not callable
+[2024-11-18T08:26:55.895+0000] {logging_mixin.py:151} INFO - Error while geocoding He Long Stadium, China: 'module' object is not callable
+[2024-11-18T08:26:55.895+0000] {logging_mixin.py:151} INFO - Error while geocoding Cape Town Stadium, South Africa: 'module' object is not callable
+[2024-11-18T08:26:55.895+0000] {logging_mixin.py:151} INFO - Error while geocoding Plovdiv Stadium, Bulgaria: 'module' object is not callable
+[2024-11-18T08:26:55.896+0000] {logging_mixin.py:151} INFO - Error while geocoding Bobby Dodd Stadium, United States: 'module' object is not callable
+[2024-11-18T08:26:55.896+0000] {logging_mixin.py:151} INFO - Error while geocoding Johan Cruijff Arena, Netherlands: 'module' object is not callable
+[2024-11-18T08:26:55.896+0000] {logging_mixin.py:151} INFO - Error while geocoding Tianhe Stadium, China: 'module' object is not callable
+[2024-11-18T08:26:55.896+0000] {logging_mixin.py:151} INFO - Error while geocoding Stadio Diego Armando Maradona, Italy: 'module' object is not callable
+[2024-11-18T08:26:55.896+0000] {logging_mixin.py:151} INFO - Error while geocoding Tianjin Olympic Sports Centre Stadium, China: 'module' object is not callable
+[2024-11-18T08:26:55.897+0000] {logging_mixin.py:151} INFO - Error while geocoding MERKUR SPIEL-ARENA, Germany: 'module' object is not callable
+[2024-11-18T08:26:55.897+0000] {logging_mixin.py:151} INFO - Error while geocoding Boris Paitchadze Dinamo Arena, Georgia: 'module' object is not callable
+[2024-11-18T08:26:55.897+0000] {logging_mixin.py:151} INFO - Error while geocoding Wuhan Sports Centre Stadium, China: 'module' object is not callable
+[2024-11-18T08:26:55.897+0000] {logging_mixin.py:151} INFO - Error while geocoding BC Place Stadium, Canada: 'module' object is not callable
+[2024-11-18T08:26:55.897+0000] {logging_mixin.py:151} INFO - Error while geocoding Yankee Stadium, United States: 'module' object is not callable
+[2024-11-18T08:26:55.897+0000] {logging_mixin.py:151} INFO - Error while geocoding Hrazdan Stadium, Armenia: 'module' object is not callable
+[2024-11-18T08:26:55.898+0000] {logging_mixin.py:151} INFO - Error while geocoding BORUSSIA-PARK, Germany: 'module' object is not callable
+[2024-11-18T08:26:55.898+0000] {logging_mixin.py:151} INFO - Error while geocoding Moses Mabhida Stadium, South Africa: 'module' object is not callable
+[2024-11-18T08:26:55.898+0000] {logging_mixin.py:151} INFO - Error while geocoding Busan Asiad Main Stadium, South Korea: 'module' object is not callable
+[2024-11-18T08:26:55.898+0000] {logging_mixin.py:151} INFO - Error while geocoding Estádio Estadual Jornalista Edgar Augusto Proença, Brazil: 'module' object is not callable
+[2024-11-18T08:26:55.898+0000] {logging_mixin.py:151} INFO - Error while geocoding Estadio Único Diego Armando Maradona, Argentina: 'module' object is not callable
+[2024-11-18T08:26:55.899+0000] {logging_mixin.py:151} INFO - Error while geocoding Adelaide Oval, Australia: 'module' object is not callable
+[2024-11-18T08:26:55.899+0000] {logging_mixin.py:151} INFO - Error while geocoding Docklands Stadium, Australia: 'module' object is not callable
+[2024-11-18T08:26:55.899+0000] {logging_mixin.py:151} INFO - Error while geocoding Estádio Municipal João Havelange, Brazil: 'module' object is not callable
+[2024-11-18T08:26:55.899+0000] {logging_mixin.py:151} INFO - Error while geocoding San Mamés, Spain: 'module' object is not callable
+[2024-11-18T08:26:55.899+0000] {logging_mixin.py:151} INFO - Error while geocoding Aleppo International Stadium, Syria: 'module' object is not callable
+[2024-11-18T08:26:55.899+0000] {logging_mixin.py:151} INFO - Error while geocoding Estadio Nacional, Peru: 'module' object is not callable
+[2024-11-18T08:26:55.899+0000] {logging_mixin.py:151} INFO - Error while geocoding Huanglong Stadium, China: 'module' object is not callable
+[2024-11-18T08:26:55.899+0000] {logging_mixin.py:151} INFO - Error while geocoding RAMS Park, Turkey: 'module' object is not callable
+[2024-11-18T08:26:55.900+0000] {logging_mixin.py:151} INFO - Error while geocoding Suncorp Stadium, Australia: 'module' object is not callable
+[2024-11-18T08:26:55.900+0000] {logging_mixin.py:151} INFO - Error while geocoding St. James' Park, England: 'module' object is not callable
+[2024-11-18T08:26:55.900+0000] {logging_mixin.py:151} INFO - Error while geocoding Kings Park Stadium, South Africa: 'module' object is not callable
+[2024-11-18T08:26:55.900+0000] {logging_mixin.py:151} INFO - Error while geocoding Newlands Stadium, South Africa: 'module' object is not callable
+[2024-11-18T08:26:55.900+0000] {logging_mixin.py:151} INFO - Error while geocoding Hampden Park, Scotland: 'module' object is not callable
+[2024-11-18T08:26:55.900+0000] {logging_mixin.py:151} INFO - Error while geocoding Estadio Monumental de Maturín, Venezuela: 'module' object is not callable
+[2024-11-18T08:26:55.900+0000] {logging_mixin.py:151} INFO - Error while geocoding Loftus Versfeld Stadium, South Africa: 'module' object is not callable
+[2024-11-18T08:26:55.900+0000] {logging_mixin.py:151} INFO - Error while geocoding Aviva Stadium, Ireland: 'module' object is not callable
+[2024-11-18T08:26:55.900+0000] {logging_mixin.py:151} INFO - Error while geocoding Guiyang Olympic Sports Centre Stadium, China: 'module' object is not callable
+[2024-11-18T08:26:55.901+0000] {logging_mixin.py:151} INFO - Error while geocoding Hohhot City Stadium, China: 'module' object is not callable
+[2024-11-18T08:26:55.901+0000] {logging_mixin.py:151} INFO - Error while geocoding Rajamangala National Stadium, Thailand: 'module' object is not callable
+[2024-11-18T08:26:55.901+0000] {logging_mixin.py:151} INFO - Error while geocoding Donbass Arena, Ukraine: 'module' object is not callable
+[2024-11-18T08:26:55.901+0000] {logging_mixin.py:151} INFO - Error while geocoding Estadio Presidente Juan Domingo Perón, Argentina: 'module' object is not callable
+[2024-11-18T08:26:55.901+0000] {logging_mixin.py:151} INFO - Error while geocoding İzmir Atatürk Stadyumu, Turkey: 'module' object is not callable
+[2024-11-18T08:26:55.901+0000] {logging_mixin.py:151} INFO - Error while geocoding Stadion Feijenoord, Netherlands: 'module' object is not callable
+[2024-11-18T08:26:55.901+0000] {logging_mixin.py:151} INFO - Error while geocoding Estadio BBVA, Mexico: 'module' object is not callable
+[2024-11-18T08:26:55.901+0000] {logging_mixin.py:151} INFO - Error while geocoding Ghadir Stadium, Iran: 'module' object is not callable
+[2024-11-18T08:26:55.901+0000] {logging_mixin.py:151} INFO - Error while geocoding Estádio José Pinheiro Borda, Brazil: 'module' object is not callable
+[2024-11-18T08:26:55.901+0000] {logging_mixin.py:151} INFO - Error while geocoding Ibrox Stadium, Scotland: 'module' object is not callable
+[2024-11-18T08:26:55.902+0000] {logging_mixin.py:151} INFO - Error while geocoding Shizuoka Stadium, Japan: 'module' object is not callable
+[2024-11-18T08:26:55.902+0000] {logging_mixin.py:151} INFO - Error while geocoding Ernst-Happel-Stadion, Austria: 'module' object is not callable
+[2024-11-18T08:26:55.902+0000] {logging_mixin.py:151} INFO - Error while geocoding Huntington Bank Stadium, United States: 'module' object is not callable
+[2024-11-18T08:26:55.902+0000] {logging_mixin.py:151} INFO - Error while geocoding Estadio Cuauhtémoc, Mexico: 'module' object is not callable
+[2024-11-18T08:26:55.902+0000] {logging_mixin.py:151} INFO - Error while geocoding Strawberry Arena, Sweden: 'module' object is not callable
+[2024-11-18T08:26:55.902+0000] {logging_mixin.py:151} INFO - Error while geocoding Ülker Stadyumu, Turkey: 'module' object is not callable
+[2024-11-18T08:26:55.902+0000] {logging_mixin.py:151} INFO - Error while geocoding Stanford Stadium, United States: 'module' object is not callable
+[2024-11-18T08:26:55.902+0000] {logging_mixin.py:151} INFO - Error while geocoding Stade Pierre-Mauroy, France: 'module' object is not callable
+[2024-11-18T08:26:55.903+0000] {logging_mixin.py:151} INFO - Error while geocoding Stade Roi Baudouin, Belgium: 'module' object is not callable
+[2024-11-18T08:26:55.903+0000] {logging_mixin.py:151} INFO - Error while geocoding Shaanxi Province Stadium, China: 'module' object is not callable
+[2024-11-18T08:26:55.903+0000] {logging_mixin.py:151} INFO - Error while geocoding Ajinomoto Stadium, Japan: 'module' object is not callable
+[2024-11-18T08:26:55.903+0000] {logging_mixin.py:151} INFO - Error while geocoding Estádio José Alvalade, Portugal: 'module' object is not callable
+[2024-11-18T08:26:55.903+0000] {logging_mixin.py:151} INFO - Error while geocoding Estádio do Dragão, Portugal: 'module' object is not callable
+[2024-11-18T08:26:55.903+0000] {logging_mixin.py:151} INFO - Error while geocoding Casa de Apostas Arena Fonte Nova, Brazil: 'module' object is not callable
+[2024-11-18T08:26:55.903+0000] {logging_mixin.py:151} INFO - Error while geocoding Stade Olympique de Sousse, Tunisia: 'module' object is not callable
+[2024-11-18T08:26:55.903+0000] {logging_mixin.py:151} INFO - Error while geocoding RheinEnergieSTADION, Germany: 'module' object is not callable
+[2024-11-18T08:26:55.903+0000] {logging_mixin.py:151} INFO - Error while geocoding Harbin Sports City Centre Stadium, China: 'module' object is not callable
+[2024-11-18T08:26:55.903+0000] {logging_mixin.py:151} INFO - Error while geocoding Greenfield International Stadium, India: 'module' object is not callable
+[2024-11-18T08:26:55.903+0000] {logging_mixin.py:151} INFO - Error while geocoding EMS Stadium, India: 'module' object is not callable
+[2024-11-18T08:26:55.904+0000] {logging_mixin.py:151} INFO - Error while geocoding KD Singh Babu Stadium, India: 'module' object is not callable
+[2024-11-18T08:26:55.904+0000] {logging_mixin.py:151} INFO - Error while geocoding Eden Park, New Zealand: 'module' object is not callable
+[2024-11-18T08:26:55.904+0000] {logging_mixin.py:151} INFO - Error while geocoding Estádio 11 de Novembro, Angola: 'module' object is not callable
+[2024-11-18T08:26:55.904+0000] {logging_mixin.py:151} INFO - Error while geocoding Henan Provincial Stadium, China: 'module' object is not callable
+[2024-11-18T08:26:55.904+0000] {logging_mixin.py:151} INFO - Error while geocoding Jiangxi Olympic Sports Center, China: 'module' object is not callable
+[2024-11-18T08:26:55.904+0000] {logging_mixin.py:151} INFO - Error while geocoding Max-Morlock-Stadion, Germany: 'module' object is not callable
+[2024-11-18T08:26:55.904+0000] {logging_mixin.py:151} INFO - Error while geocoding June 11 Stadium, Libya: 'module' object is not callable
+[2024-11-18T08:26:55.904+0000] {logging_mixin.py:151} INFO - Error while geocoding Xinjiang Sports Centre Stadium, China: 'module' object is not callable
+[2024-11-18T08:26:55.904+0000] {logging_mixin.py:151} INFO - Error while geocoding Kim Il-sung Stadium, North Korea: 'module' object is not callable
+[2024-11-18T08:26:55.904+0000] {logging_mixin.py:151} INFO - Error while geocoding EDION Stadium Hiroshima, Japan: 'module' object is not callable
+[2024-11-18T08:26:55.905+0000] {logging_mixin.py:151} INFO - Error while geocoding Pars Shiraz Stadium, Iran: 'module' object is not callable
+[2024-11-18T08:26:55.905+0000] {logging_mixin.py:151} INFO - Error while geocoding Stade du 26 mars, Mali: 'module' object is not callable
+[2024-11-18T08:26:55.905+0000] {logging_mixin.py:151} INFO - Error while geocoding Stade Abdoulaye Wade, Senegal: 'module' object is not callable
+[2024-11-18T08:26:55.905+0000] {logging_mixin.py:151} INFO - Error while geocoding Sultan Mizan Zainal Abidin Stadium, Malaysia: 'module' object is not callable
+[2024-11-18T08:26:55.905+0000] {logging_mixin.py:151} INFO - Error while geocoding Estadio Akron, Mexico: 'module' object is not callable
+[2024-11-18T08:26:55.905+0000] {logging_mixin.py:151} INFO - Error while geocoding Levy Mwanawasa Stadium, Zambia: 'module' object is not callable
+[2024-11-18T08:26:55.905+0000] {logging_mixin.py:151} INFO - Error while geocoding Fritz-Walter-Stadion, Germany: 'module' object is not callable
+[2024-11-18T08:26:55.905+0000] {logging_mixin.py:151} INFO - Error while geocoding Estadio José Amalfitani, Argentina: 'module' object is not callable
+[2024-11-18T08:26:55.905+0000] {logging_mixin.py:151} INFO - Error while geocoding Camille Chamoun Sports City Stadium, Lebanon: 'module' object is not callable
+[2024-11-18T08:26:55.906+0000] {logging_mixin.py:151} INFO - Error while geocoding Miyagi Stadium, Japan: 'module' object is not callable
+[2024-11-18T08:26:55.906+0000] {logging_mixin.py:151} INFO - Error while geocoding Incheon Munhak Stadium, South Korea: 'module' object is not callable
+[2024-11-18T08:26:55.906+0000] {logging_mixin.py:151} INFO - Error while geocoding Heinz-von-Heiden-Arena, Germany: 'module' object is not callable
+[2024-11-18T08:26:55.906+0000] {logging_mixin.py:151} INFO - Error while geocoding Parc des Princes, France: 'module' object is not callable
+[2024-11-18T08:26:55.906+0000] {logging_mixin.py:151} INFO - Error while geocoding Stadium of Light, England: 'module' object is not callable
+[2024-11-18T08:26:55.906+0000] {logging_mixin.py:151} INFO - Error while geocoding Estadio Nacional, Chile: 'module' object is not callable
+[2024-11-18T08:26:55.906+0000] {logging_mixin.py:151} INFO - Error while geocoding Nelson Mandela Bay Stadium, South Africa: 'module' object is not callable
+[2024-11-18T08:26:55.906+0000] {logging_mixin.py:151} INFO - Error while geocoding Estadio Tomás Adolfo Ducó, Argentina: 'module' object is not callable
+[2024-11-18T08:26:55.906+0000] {logging_mixin.py:151} INFO - Error while geocoding Jinnah Sports Stadium, Pakistan: 'module' object is not callable
+[2024-11-18T08:26:55.906+0000] {logging_mixin.py:151} INFO - Error while geocoding Estadio Libertadores de América, Argentina: 'module' object is not callable
+[2024-11-18T08:26:55.907+0000] {logging_mixin.py:151} INFO - Error while geocoding Free State Stadium, South Africa: 'module' object is not callable
+[2024-11-18T08:26:55.907+0000] {logging_mixin.py:151} INFO - Error while geocoding Nagai Stadium, Japan: 'module' object is not callable
+[2024-11-18T08:26:55.907+0000] {logging_mixin.py:151} INFO - Error while geocoding Neo Química Arena, Brazil: 'module' object is not callable
+[2024-11-18T08:26:55.907+0000] {logging_mixin.py:151} INFO - Error while geocoding Rogers Centre, Canada: 'module' object is not callable
+[2024-11-18T08:26:55.907+0000] {logging_mixin.py:151} INFO - Error while geocoding Estadio Monumental, Chile: 'module' object is not callable
+[2024-11-18T08:26:55.907+0000] {logging_mixin.py:151} INFO - Error while geocoding Stadio Artemio Franchi, Italy: 'module' object is not callable
+[2024-11-18T08:26:55.907+0000] {logging_mixin.py:151} INFO - Error while geocoding Estadio Ciudad de Lanús – Néstor Díaz Pérez, Argentina: 'module' object is not callable
+[2024-11-18T08:26:55.907+0000] {logging_mixin.py:151} INFO - Error while geocoding Estadio Metropolitano Roberto Meléndez, Colombia: 'module' object is not callable
+[2024-11-18T08:26:55.907+0000] {logging_mixin.py:151} INFO - Error while geocoding Estádio Olímpico Nilton Santos, Brazil: 'module' object is not callable
+[2024-11-18T08:26:55.907+0000] {logging_mixin.py:151} INFO - Error while geocoding Itaipava Arena Pernambuco, Brazil: 'module' object is not callable
+[2024-11-18T08:26:55.908+0000] {logging_mixin.py:151} INFO - Error while geocoding Arena MRV, Brazil: 'module' object is not callable
+[2024-11-18T08:26:55.908+0000] {logging_mixin.py:151} INFO - Error while geocoding Estádio Paulo Constantino, Brazil: 'module' object is not callable
+[2024-11-18T08:26:55.908+0000] {logging_mixin.py:151} INFO - Error while geocoding Estadio Atanasio Girardot, Colombia: 'module' object is not callable
+[2024-11-18T08:26:55.908+0000] {logging_mixin.py:151} INFO - Error while geocoding Estadio Ramón Sánchez Pizjuán, Spain: 'module' object is not callable
+[2024-11-18T08:26:55.908+0000] {logging_mixin.py:151} INFO - Error while geocoding Adrar Stadium, Morocco: 'module' object is not callable
+[2024-11-18T08:26:55.908+0000] {logging_mixin.py:151} INFO - Error while geocoding Lukoil Arena, Russia: 'module' object is not callable
+[2024-11-18T08:26:55.908+0000] {logging_mixin.py:151} INFO - Error while geocoding Grand stade de Marrakech, Morocco: 'module' object is not callable
+[2024-11-18T08:26:55.908+0000] {logging_mixin.py:151} INFO - Error while geocoding Mandela National Stadium, Uganda: 'module' object is not callable
+[2024-11-18T08:26:55.908+0000] {logging_mixin.py:151} INFO - Error while geocoding Tarczyński Arena Wrocław, Poland: 'module' object is not callable
+[2024-11-18T08:26:55.909+0000] {logging_mixin.py:151} INFO - Error while geocoding Kazan Arena, Russia: 'module' object is not callable
+[2024-11-18T08:26:55.909+0000] {logging_mixin.py:151} INFO - Error while geocoding Estadio Inca Garcilaso de la Vega, Peru: 'module' object is not callable
+[2024-11-18T08:26:55.909+0000] {logging_mixin.py:151} INFO - Error while geocoding Estádio da Machava, Mozambique: 'module' object is not callable
+[2024-11-18T08:26:55.909+0000] {logging_mixin.py:151} INFO - Error while geocoding Stadion Gelora Bung Tomo, Indonesia: 'module' object is not callable
+[2024-11-18T08:26:55.909+0000] {logging_mixin.py:151} INFO - Error while geocoding Stadion Harapan Banga, Indonesia: 'module' object is not callable
+[2024-11-18T08:26:55.909+0000] {logging_mixin.py:151} INFO - Error while geocoding Estadio General Pablo Rojas, Paraguay: 'module' object is not callable
+[2024-11-18T08:26:55.909+0000] {logging_mixin.py:151} INFO - Error while geocoding Stade Mohammed V, Morocco: 'module' object is not callable
+[2024-11-18T08:26:55.909+0000] {logging_mixin.py:151} INFO - Error while geocoding Latakia Sports City Stadium, Syria: 'module' object is not callable
+[2024-11-18T08:26:55.909+0000] {logging_mixin.py:151} INFO - Error while geocoding Zibo Sports Centre Stadium, China: 'module' object is not callable
+[2024-11-18T08:26:55.909+0000] {logging_mixin.py:151} INFO - Error while geocoding Weifang Sports Centre Stadium, China: 'module' object is not callable
+[2024-11-18T08:26:55.910+0000] {logging_mixin.py:151} INFO - Error while geocoding Yantai Sports Park Stadium, China: 'module' object is not callable
+[2024-11-18T08:26:55.910+0000] {logging_mixin.py:151} INFO - Error while geocoding Stadium Tuanku Abdul Rahman, Malaysia: 'module' object is not callable
+[2024-11-18T08:26:55.910+0000] {logging_mixin.py:151} INFO - Error while geocoding Stade du Complexe sportif de Fès, Morocco: 'module' object is not callable
+[2024-11-18T08:26:55.910+0000] {logging_mixin.py:151} INFO - Error while geocoding Lagos National Stadium, Nigeria: 'module' object is not callable
+[2024-11-18T08:26:55.910+0000] {logging_mixin.py:151} INFO - Error while geocoding Egyptian Army Stadium, Egypt: 'module' object is not callable
+[2024-11-18T08:26:55.910+0000] {logging_mixin.py:151} INFO - Error while geocoding Toyota Stadium, Japan: 'module' object is not callable
+[2024-11-18T08:26:55.910+0000] {logging_mixin.py:151} INFO - Error while geocoding Zayed Sports City Stadium, United Arab Emirates: 'module' object is not callable
+[2024-11-18T08:26:55.910+0000] {logging_mixin.py:151} INFO - Error while geocoding Red Bull Arena, Germany: 'module' object is not callable
+[2024-11-18T08:26:55.911+0000] {logging_mixin.py:151} INFO - Error while geocoding Estádio Governador Alberto Tavares Silva, Brazil: 'module' object is not callable
+[2024-11-18T08:26:55.911+0000] {logging_mixin.py:151} INFO - Error while geocoding Estádio Universitário Pedro Pedrossian, Brazil: 'module' object is not callable
+[2024-11-18T08:26:55.911+0000] {logging_mixin.py:151} INFO - Error while geocoding Ulsan Munsu Football Stadium, South Korea: 'module' object is not callable
+[2024-11-18T08:26:55.911+0000] {logging_mixin.py:151} INFO - Error while geocoding Arena Pantanal, Brazil: 'module' object is not callable
+[2024-11-18T08:26:55.911+0000] {logging_mixin.py:151} INFO - Error while geocoding Arena da Amazônia, Brazil: 'module' object is not callable
+[2024-11-18T08:26:55.911+0000] {logging_mixin.py:151} INFO - Error while geocoding Suwon World Cup Stadium, South Korea: 'module' object is not callable
+[2024-11-18T08:26:55.911+0000] {logging_mixin.py:151} INFO - Error while geocoding Stadion Utama Riau, Indonesia: 'module' object is not callable
+[2024-11-18T08:26:55.911+0000] {logging_mixin.py:151} INFO - Error while geocoding Allianz Parque, Brazil: 'module' object is not callable
+[2024-11-18T08:26:55.911+0000] {logging_mixin.py:151} INFO - Error while geocoding Shandong Provincial Stadium, China: 'module' object is not callable
+[2024-11-18T08:26:55.912+0000] {logging_mixin.py:151} INFO - Error while geocoding Polsat Plus Arena Gdańsk, Poland: 'module' object is not callable
+[2024-11-18T08:26:55.912+0000] {logging_mixin.py:151} INFO - Error while geocoding Estadio Pedro Bidegain, Argentina: 'module' object is not callable
+[2024-11-18T08:26:55.912+0000] {logging_mixin.py:151} INFO - Error while geocoding Stadion Miejski w Poznaniu, Poland: 'module' object is not callable
+[2024-11-18T08:26:55.912+0000] {logging_mixin.py:151} INFO - Error while geocoding Vasil Levski National Stadium, Bulgaria: 'module' object is not callable
+[2024-11-18T08:26:55.912+0000] {logging_mixin.py:151} INFO - Error while geocoding Estadio Universidad San Marcos, Peru: 'module' object is not callable
+[2024-11-18T08:26:55.912+0000] {logging_mixin.py:151} INFO - Error while geocoding Ullevi, Sweden: 'module' object is not callable
+[2024-11-18T08:26:55.912+0000] {logging_mixin.py:151} INFO - Error while geocoding Jinzhou Binhai Sports Centre Stadium, China: 'module' object is not callable
+[2024-11-18T08:26:55.912+0000] {logging_mixin.py:151} INFO - Error while geocoding Estadio General Santander, Colombia: 'module' object is not callable
+[2024-11-18T08:26:55.912+0000] {logging_mixin.py:151} INFO - Error while geocoding Villa Park, England: 'module' object is not callable
+[2024-11-18T08:26:55.912+0000] {logging_mixin.py:151} INFO - Error while geocoding Perak Stadium, Malaysia: 'module' object is not callable
+[2024-11-18T08:26:55.912+0000] {logging_mixin.py:151} INFO - Error while geocoding Jeonju World Cup Stadium, South Korea: 'module' object is not callable
+[2024-11-18T08:26:55.913+0000] {logging_mixin.py:151} INFO - Error while geocoding Ligga Arena, Brazil: 'module' object is not callable
+[2024-11-18T08:26:55.913+0000] {logging_mixin.py:151} INFO - Error while geocoding Weserstadion, Germany: 'module' object is not callable
+[2024-11-18T08:26:55.913+0000] {logging_mixin.py:151} INFO - Error while geocoding Denka Big Swan Stadium, Japan: 'module' object is not callable
+[2024-11-18T08:26:55.913+0000] {logging_mixin.py:151} INFO - Error while geocoding Estadio Olimpico Metropolitano de Mérida, Venezuela: 'module' object is not callable
+[2024-11-18T08:26:55.913+0000] {logging_mixin.py:151} INFO - Error while geocoding Daejeon World Cup Stadium, South Korea: 'module' object is not callable
+[2024-11-18T08:26:55.913+0000] {logging_mixin.py:151} INFO - Error while geocoding Matmut ATLANTIQUE, France: 'module' object is not callable
+[2024-11-18T08:26:55.913+0000] {logging_mixin.py:151} INFO - Error while geocoding Helsingin Olympiastadion, Finland: 'module' object is not callable
+[2024-11-18T08:26:55.913+0000] {logging_mixin.py:151} INFO - Error while geocoding Estádio Serra Dourada, Brazil: 'module' object is not callable
+[2024-11-18T08:26:55.913+0000] {logging_mixin.py:151} INFO - Error while geocoding Estadio Deportivo Cali, Colombia: 'module' object is not callable
+[2024-11-18T08:26:55.913+0000] {logging_mixin.py:151} INFO - Error while geocoding Estadio Modelo Alberto Spencer, Ecuador: 'module' object is not callable
+[2024-11-18T08:26:55.913+0000] {logging_mixin.py:151} INFO - Error while geocoding Estádio do Zimpeto, Mozambique: 'module' object is not callable
+[2024-11-18T08:26:55.914+0000] {logging_mixin.py:151} INFO - Error while geocoding Chengdu Sports Centre Stadium, China: 'module' object is not callable
+[2024-11-18T08:26:55.914+0000] {logging_mixin.py:151} INFO - Error while geocoding Royal Bafokeng Stadium, South Africa: 'module' object is not callable
+[2024-11-18T08:26:55.914+0000] {logging_mixin.py:151} INFO - Error while geocoding Estadio Universitario, Mexico: 'module' object is not callable
+[2024-11-18T08:26:55.914+0000] {logging_mixin.py:151} INFO - Error while geocoding Estadio Brigadier General Estanislao López, Argentina: 'module' object is not callable
+[2024-11-18T08:26:55.914+0000] {logging_mixin.py:151} INFO - Error while geocoding Estadio Marcelo Bielsa, Argentina: 'module' object is not callable
+[2024-11-18T08:26:55.914+0000] {logging_mixin.py:151} INFO - Error while geocoding Stade Geoffroy-Guichard, France: 'module' object is not callable
+[2024-11-18T08:26:55.914+0000] {logging_mixin.py:151} INFO - Error while geocoding Vodafone Park, Turkey: 'module' object is not callable
+[2024-11-18T08:26:55.914+0000] {logging_mixin.py:151} INFO - Error while geocoding Peter Mokaba Stadium, South Africa: 'module' object is not callable
+[2024-11-18T08:26:55.914+0000] {logging_mixin.py:151} INFO - Error while geocoding Estadio Gigante de Arroyito, Argentina: 'module' object is not callable
+[2024-11-18T08:26:55.915+0000] {logging_mixin.py:151} INFO - Error while geocoding Estadio Cachamay, Venezuela: 'module' object is not callable
+[2024-11-18T08:26:55.915+0000] {logging_mixin.py:151} INFO - Error while geocoding Estadio de Liga Deportiva Universitaria, Ecuador: 'module' object is not callable
+[2024-11-18T08:26:55.915+0000] {logging_mixin.py:151} INFO - Error while geocoding Allianz Stadium, Italy: 'module' object is not callable
+[2024-11-18T08:26:55.915+0000] {logging_mixin.py:151} INFO - Error while geocoding Sapporo Dome, Japan: 'module' object is not callable
+[2024-11-18T08:26:55.915+0000] {logging_mixin.py:151} INFO - Error while geocoding Stamford Bridge, England: 'module' object is not callable
+[2024-11-18T08:26:55.915+0000] {logging_mixin.py:151} INFO - Error while geocoding Goyang Stadium, South Korea: 'module' object is not callable
+[2024-11-18T08:26:55.915+0000] {logging_mixin.py:151} INFO - Error while geocoding Estadio Hernando Siles, Bolivia: 'module' object is not callable
+[2024-11-18T08:26:55.915+0000] {logging_mixin.py:151} INFO - Error while geocoding Bingu National Stadium, Malawi: 'module' object is not callable
+[2024-11-18T08:26:55.915+0000] {logging_mixin.py:151} INFO - Error while geocoding Mbombela Stadium, South Africa: 'module' object is not callable
+[2024-11-18T08:26:55.915+0000] {logging_mixin.py:151} INFO - Error while geocoding Estadio José Pachencho Romero, Venezuela: 'module' object is not callable
+[2024-11-18T08:26:55.915+0000] {logging_mixin.py:151} INFO - Error while geocoding Stade Nelson Mandela, Algeria: 'module' object is not callable
+[2024-11-18T08:26:55.916+0000] {logging_mixin.py:151} INFO - Error while geocoding Kashima Football Stadium, Japan: 'module' object is not callable
+[2024-11-18T08:26:55.916+0000] {logging_mixin.py:151} INFO - Error while geocoding Baba Yara Stadium, Ghana: 'module' object is not callable
+[2024-11-18T08:26:55.916+0000] {logging_mixin.py:151} INFO - Error while geocoding Estádio Major Antônio Couto Pereira, Brazil: 'module' object is not callable
+[2024-11-18T08:26:55.916+0000] {logging_mixin.py:151} INFO - Error while geocoding Stage Front Stadium, Spain: 'module' object is not callable
+[2024-11-18T08:26:55.916+0000] {logging_mixin.py:151} INFO - Error while geocoding Estadio Metropolitano de fútbol de Lara, Venezuela: 'module' object is not callable
+[2024-11-18T08:26:55.916+0000] {logging_mixin.py:151} INFO - Error while geocoding Estadio Malvinas Argentinas, Argentina: 'module' object is not callable
+[2024-11-18T08:26:55.916+0000] {logging_mixin.py:151} INFO - Error while geocoding Stadion Lukas Enembe, Indonesia: 'module' object is not callable
+[2024-11-18T08:26:55.916+0000] {logging_mixin.py:151} INFO - Error while geocoding Gwangju World Cup Stadium, South Korea: 'module' object is not callable
+[2024-11-18T08:26:55.916+0000] {logging_mixin.py:151} INFO - Error while geocoding Sân vận động Quốc gia Mỹ Đình, Vietnam: 'module' object is not callable
+[2024-11-18T08:26:55.916+0000] {logging_mixin.py:151} INFO - Error while geocoding Goodison Park, England: 'module' object is not callable
+[2024-11-18T08:26:55.916+0000] {logging_mixin.py:151} INFO - Error while geocoding Estádio Governador João Castelo, Brazil: 'module' object is not callable
+[2024-11-18T08:26:55.917+0000] {logging_mixin.py:151} INFO - Error while geocoding Stade Miloud-Hadefi, Algeria: 'module' object is not callable
+[2024-11-18T08:26:55.917+0000] {logging_mixin.py:151} INFO - Error while geocoding Estadio Campeón del Siglo, Uruguay: 'module' object is not callable
+[2024-11-18T08:26:55.917+0000] {logging_mixin.py:151} INFO - Error while geocoding Metalist Stadium, Ukraine: 'module' object is not callable
+[2024-11-18T08:26:55.917+0000] {logging_mixin.py:151} INFO - Error while geocoding Al-Janoub Stadium, Qatar: 'module' object is not callable
+[2024-11-18T08:26:55.917+0000] {logging_mixin.py:151} INFO - Error while geocoding Al-Thumama Stadium, Qatar: 'module' object is not callable
+[2024-11-18T08:26:55.917+0000] {logging_mixin.py:151} INFO - Error while geocoding Stade Ahmed-Zabana, Algeria: 'module' object is not callable
+[2024-11-18T08:26:55.917+0000] {logging_mixin.py:151} INFO - Error while geocoding Stadion Batakan, Indonesia: 'module' object is not callable
+[2024-11-18T08:26:55.917+0000] {logging_mixin.py:151} INFO - Error while geocoding Stadion Gelora Joko Samudro, Indonesia: 'module' object is not callable
+[2024-11-18T08:26:55.917+0000] {logging_mixin.py:151} INFO - Error while geocoding Fisht Olympic Stadium, Russia: 'module' object is not callable
+[2024-11-18T08:26:55.917+0000] {logging_mixin.py:151} INFO - Error while geocoding Rentschler Field, United States: 'module' object is not callable
+[2024-11-18T08:26:55.918+0000] {logging_mixin.py:151} INFO - Error while geocoding Jawaharlal Nehru Stadium, India: 'module' object is not callable
+[2024-11-18T08:26:55.918+0000] {logging_mixin.py:151} INFO - Error while geocoding Hang Jebat Stadium, Malaysia: 'module' object is not callable
+[2024-11-18T08:26:55.918+0000] {logging_mixin.py:151} INFO - Error while geocoding Hong Kong Stadium, Hong Kong: 'module' object is not callable
+[2024-11-18T08:26:55.918+0000] {logging_mixin.py:151} INFO - Error while geocoding Stadium Negeri Pulau Pinang, Malaysia: 'module' object is not callable
+[2024-11-18T08:26:55.918+0000] {logging_mixin.py:151} INFO - Error while geocoding Accra Sports Stadium, Ghana: 'module' object is not callable
+[2024-11-18T08:26:55.918+0000] {logging_mixin.py:151} INFO - Error while geocoding Sarawak Stadium, Malaysia: 'module' object is not callable
+[2024-11-18T08:26:55.918+0000] {logging_mixin.py:151} INFO - Error while geocoding Bogyoke Aung San Stadium, Myanmar: 'module' object is not callable
+[2024-11-18T08:26:55.918+0000] {logging_mixin.py:151} INFO - Error while geocoding Resonac Dome Ōita, Japan: 'module' object is not callable
+[2024-11-18T08:26:55.918+0000] {logging_mixin.py:151} INFO - Error while geocoding Stadium Darul Makmur, Malaysia: 'module' object is not callable
+[2024-11-18T08:26:55.918+0000] {logging_mixin.py:151} INFO - Error while geocoding Khalifa International Stadium, Qatar: 'module' object is not callable
+[2024-11-18T08:26:55.919+0000] {logging_mixin.py:151} INFO - Error while geocoding Stade de l’Amitié sino-gabonaise, Gabon: 'module' object is not callable
+[2024-11-18T08:26:55.919+0000] {logging_mixin.py:151} INFO - Error while geocoding Peoples Football Stadium, Pakistan: 'module' object is not callable
+[2024-11-18T08:26:55.919+0000] {logging_mixin.py:151} INFO - Error while geocoding JRD Tata Sports Complex Stadium, India: 'module' object is not callable
+[2024-11-18T08:26:55.919+0000] {logging_mixin.py:151} INFO - Error while geocoding Bao'an Stadium, China: 'module' object is not callable
+[2024-11-18T08:26:55.919+0000] {logging_mixin.py:151} INFO - Error while geocoding Kunming Tuodong Sports Centre Stadium, China: 'module' object is not callable
+[2024-11-18T08:26:55.919+0000] {logging_mixin.py:151} INFO - Error while geocoding Taizhou Sports Centre Stadium, China: 'module' object is not callable
+[2024-11-18T08:26:55.919+0000] {logging_mixin.py:151} INFO - Error while geocoding Wuhu Olympic Stadium, China: 'module' object is not callable
+[2024-11-18T08:26:55.919+0000] {logging_mixin.py:151} INFO - Error while geocoding Huizhou Olympic Stadium, China: 'module' object is not callable
+[2024-11-18T08:26:55.921+0000] {logging_mixin.py:151} INFO - Error while geocoding Pyongyang, North Korea: 'module' object is not callable
+[2024-11-18T08:26:55.922+0000] {logging_mixin.py:151} INFO - Error while geocoding Ann Arbor, Michigan, United States: 'module' object is not callable
+[2024-11-18T08:26:55.922+0000] {logging_mixin.py:151} INFO - Error while geocoding Columbus, Ohio, United States: 'module' object is not callable
+[2024-11-18T08:26:55.922+0000] {logging_mixin.py:151} INFO - Error while geocoding Melbourne, Victoria, Australia: 'module' object is not callable
+[2024-11-18T08:26:55.922+0000] {logging_mixin.py:151} INFO - Error while geocoding Barcelona, Catalonia, Spain: 'module' object is not callable
+[2024-11-18T08:26:55.922+0000] {logging_mixin.py:151} INFO - Error while geocoding Mexico City, Mexico: 'module' object is not callable
+[2024-11-18T08:26:55.923+0000] {logging_mixin.py:151} INFO - Error while geocoding Johannesburg, Gauteng, South Africa: 'module' object is not callable
+[2024-11-18T08:26:55.923+0000] {logging_mixin.py:151} INFO - Error while geocoding New Administrative Capital, Egypt: 'module' object is not callable
+[2024-11-18T08:26:55.923+0000] {logging_mixin.py:151} INFO - Error while geocoding Pasadena, California, United States: 'module' object is not callable
+[2024-11-18T08:26:55.923+0000] {logging_mixin.py:151} INFO - Error while geocoding Dallas, Texas, United States: 'module' object is not callable
+[2024-11-18T08:26:55.923+0000] {logging_mixin.py:151} INFO - Error while geocoding London, England, England: 'module' object is not callable
+[2024-11-18T08:26:55.923+0000] {logging_mixin.py:151} INFO - Error while geocoding Lusail, Qatar: 'module' object is not callable
+[2024-11-18T08:26:55.923+0000] {logging_mixin.py:151} INFO - Error while geocoding Kuala Lumpur, Malaysia: 'module' object is not callable
+[2024-11-18T08:26:55.924+0000] {logging_mixin.py:151} INFO - Error while geocoding Alexandria, Egypt: 'module' object is not callable
+[2024-11-18T08:26:55.924+0000] {logging_mixin.py:151} INFO - Error while geocoding Madrid, Spain: 'module' object is not callable
+[2024-11-18T08:26:55.924+0000] {logging_mixin.py:151} INFO - Error while geocoding Buenos Aires, Argentina: 'module' object is not callable
+[2024-11-18T08:26:55.924+0000] {logging_mixin.py:151} INFO - Error while geocoding Sydney, New South Wales, Australia: 'module' object is not callable
+[2024-11-18T08:26:55.924+0000] {logging_mixin.py:151} INFO - Error while geocoding East Rutherford, New Jersey, United States: 'module' object is not callable
+[2024-11-18T08:26:55.924+0000] {logging_mixin.py:151} INFO - Error while geocoding Dublin, Ireland: 'module' object is not callable
+[2024-11-18T08:26:55.924+0000] {logging_mixin.py:151} INFO - Error while geocoding Jakarta, Indonesia: 'module' object is not callable
+[2024-11-18T08:26:55.925+0000] {logging_mixin.py:151} INFO - Error while geocoding Green Bay, Wisconsin, United States: 'module' object is not callable
+[2024-11-18T08:26:55.925+0000] {logging_mixin.py:151} INFO - Error while geocoding Dortmund, Germany: 'module' object is not callable
+[2024-11-18T08:26:55.925+0000] {logging_mixin.py:151} INFO - Error while geocoding Saint-Denis, France: 'module' object is not callable
+[2024-11-18T08:26:55.925+0000] {logging_mixin.py:151} INFO - Error while geocoding Moscow, Russia: 'module' object is not callable
+[2024-11-18T08:26:55.925+0000] {logging_mixin.py:151} INFO - Error while geocoding Shah Alam, Selangor, Malaysia: 'module' object is not callable
+[2024-11-18T08:26:55.925+0000] {logging_mixin.py:151} INFO - Error while geocoding Lima, Peru: 'module' object is not callable
+[2024-11-18T08:26:55.926+0000] {logging_mixin.py:151} INFO - Error while geocoding Milan, Lombardy, Italy: 'module' object is not callable
+[2024-11-18T08:26:55.926+0000] {logging_mixin.py:151} INFO - Error while geocoding Guangzhou, Guangdong, China: 'module' object is not callable
+[2024-11-18T08:26:55.926+0000] {logging_mixin.py:151} INFO - Error while geocoding Hangzhou, Zhejiang, China: 'module' object is not callable
+[2024-11-18T08:26:55.926+0000] {logging_mixin.py:151} INFO - Error while geocoding Arlington, Texas, United States: 'module' object is not callable
+[2024-11-18T08:26:55.926+0000] {logging_mixin.py:151} INFO - Error while geocoding Kinshasa, DR Congo: 'module' object is not callable
+[2024-11-18T08:26:55.926+0000] {logging_mixin.py:151} INFO - Error while geocoding Kinshasa, DR Congo: 'module' object is not callable
+[2024-11-18T08:26:55.926+0000] {logging_mixin.py:151} INFO - Error while geocoding Harare, Zimbabwe: 'module' object is not callable
+[2024-11-18T08:26:55.926+0000] {logging_mixin.py:151} INFO - Error while geocoding Nairobi, Kenya: 'module' object is not callable
+[2024-11-18T08:26:55.927+0000] {logging_mixin.py:151} INFO - Error while geocoding Beijing, China: 'module' object is not callable
+[2024-11-18T08:26:55.927+0000] {logging_mixin.py:151} INFO - Error while geocoding Dakar, Senegal: 'module' object is not callable
+[2024-11-18T08:26:55.927+0000] {logging_mixin.py:151} INFO - Error while geocoding Rio de Janeiro, Rio de Janeiro, Brazil: 'module' object is not callable
+[2024-11-18T08:26:55.927+0000] {logging_mixin.py:151} INFO - Error while geocoding Los Angeles, California, United States: 'module' object is not callable
+[2024-11-18T08:26:55.927+0000] {logging_mixin.py:151} INFO - Error while geocoding Tehran, Iran: 'module' object is not callable
+[2024-11-18T08:26:55.927+0000] {logging_mixin.py:151} INFO - Error while geocoding Jakarta, Indonesia: 'module' object is not callable
+[2024-11-18T08:26:55.928+0000] {logging_mixin.py:151} INFO - Error while geocoding New Orleans, Louisiana, United States: 'module' object is not callable
+[2024-11-18T08:26:55.928+0000] {logging_mixin.py:151} INFO - Error while geocoding Kansas City, Missouri, United States: 'module' object is not callable
+[2024-11-18T08:26:55.928+0000] {logging_mixin.py:151} INFO - Error while geocoding Denver, United States: 'module' object is not callable
+[2024-11-18T08:26:55.928+0000] {logging_mixin.py:151} INFO - Error while geocoding Istanbul, Turkey: 'module' object is not callable
+[2024-11-18T08:26:55.928+0000] {logging_mixin.py:151} INFO - Error while geocoding Manchester, North West England, England: 'module' object is not callable
+[2024-11-18T08:26:55.928+0000] {logging_mixin.py:151} INFO - Error while geocoding Munich, Germany: 'module' object is not callable
+[2024-11-18T08:26:55.929+0000] {logging_mixin.py:151} INFO - Error while geocoding Isfahan, Iran: 'module' object is not callable
+[2024-11-18T08:26:55.929+0000] {logging_mixin.py:151} INFO - Error while geocoding Charlotte, North Carolina, United States: 'module' object is not callable
+[2024-11-18T08:26:55.929+0000] {logging_mixin.py:151} INFO - Error while geocoding Cardiff, Wales: 'module' object is not callable
+[2024-11-18T08:26:55.929+0000] {logging_mixin.py:151} INFO - Error while geocoding Berlin, Germany: 'module' object is not callable
+[2024-11-18T08:26:55.929+0000] {logging_mixin.py:151} INFO - Error while geocoding Cairo, Egypt: 'module' object is not callable
+[2024-11-18T08:26:55.929+0000] {logging_mixin.py:151} INFO - Error while geocoding Cleveland, United States: 'module' object is not callable
+[2024-11-18T08:26:55.930+0000] {logging_mixin.py:151} INFO - Error while geocoding Brasília, Distrito Federal, Brazil: 'module' object is not callable
+[2024-11-18T08:26:55.930+0000] {logging_mixin.py:151} INFO - Error while geocoding Rome, Lazio, Italy: 'module' object is not callable
+[2024-11-18T08:26:55.930+0000] {logging_mixin.py:151} INFO - Error while geocoding Yokohama, Kanagawa, Japan: 'module' object is not callable
+[2024-11-18T08:26:55.930+0000] {logging_mixin.py:151} INFO - Error while geocoding Houston, Texas, United States: 'module' object is not callable
+[2024-11-18T08:26:55.930+0000] {logging_mixin.py:151} INFO - Error while geocoding Shanghai, China: 'module' object is not callable
+[2024-11-18T08:26:55.930+0000] {logging_mixin.py:151} INFO - Error while geocoding Baltimore, United States: 'module' object is not callable
+[2024-11-18T08:26:55.930+0000] {logging_mixin.py:151} INFO - Error while geocoding Atlanta, Georgia, United States: 'module' object is not callable
+[2024-11-18T08:26:55.931+0000] {logging_mixin.py:151} INFO - Error while geocoding Madrid, Spain: 'module' object is not callable
+[2024-11-18T08:26:55.931+0000] {logging_mixin.py:151} INFO - Error while geocoding Kyiv, Ukraine: 'module' object is not callable
+[2024-11-18T08:26:55.931+0000] {logging_mixin.py:151} INFO - Error while geocoding Inglewood, California, United States: 'module' object is not callable
+[2024-11-18T08:26:55.931+0000] {logging_mixin.py:151} INFO - Error while geocoding Seoul, South Korea: 'module' object is not callable
+[2024-11-18T08:26:55.931+0000] {logging_mixin.py:151} INFO - Error while geocoding Baku, Azerbaijan: 'module' object is not callable
+[2024-11-18T08:26:55.931+0000] {logging_mixin.py:151} INFO - Error while geocoding Marousi, Attica, Greece: 'module' object is not callable
+[2024-11-18T08:26:55.931+0000] {logging_mixin.py:151} INFO - Error while geocoding Munich, Germany: 'module' object is not callable
+[2024-11-18T08:26:55.931+0000] {logging_mixin.py:151} INFO - Error while geocoding Seattle, Washington, United States: 'module' object is not callable
+[2024-11-18T08:26:55.932+0000] {logging_mixin.py:151} INFO - Error while geocoding Mexico City, Mexico: 'module' object is not callable
+[2024-11-18T08:26:55.932+0000] {logging_mixin.py:151} INFO - Error while geocoding Foxborough, Massachusetts, United States: 'module' object is not callable
+[2024-11-18T08:26:55.932+0000] {logging_mixin.py:151} INFO - Error while geocoding Jeddah, Saudi Arabia: 'module' object is not callable
+[2024-11-18T08:26:55.932+0000] {logging_mixin.py:151} INFO - Error while geocoding Philadelphia, United States: 'module' object is not callable
+[2024-11-18T08:26:55.932+0000] {logging_mixin.py:151} INFO - Error while geocoding Santa Clara, California, United States: 'module' object is not callable
+[2024-11-18T08:26:55.932+0000] {logging_mixin.py:151} INFO - Error while geocoding Pittsburgh, United States: 'module' object is not callable
+[2024-11-18T08:26:55.932+0000] {logging_mixin.py:151} INFO - Error while geocoding Saint Petersburg, Russia: 'module' object is not callable
+[2024-11-18T08:26:55.933+0000] {logging_mixin.py:151} INFO - Error while geocoding Kolkata, India: 'module' object is not callable
+[2024-11-18T08:26:55.933+0000] {logging_mixin.py:151} INFO - Error while geocoding Tokyo, Japan: 'module' object is not callable
+[2024-11-18T08:26:55.933+0000] {logging_mixin.py:151} INFO - Error while geocoding Jacksonville, Florida, United States: 'module' object is not callable
+[2024-11-18T08:26:55.933+0000] {logging_mixin.py:151} INFO - Error while geocoding Marseille, France: 'module' object is not callable
+[2024-11-18T08:26:55.933+0000] {logging_mixin.py:151} INFO - Error while geocoding Budapest, Hungary: 'module' object is not callable
+[2024-11-18T08:26:55.933+0000] {logging_mixin.py:151} INFO - Error while geocoding Edinburgh, Scotland: 'module' object is not callable
+[2024-11-18T08:26:55.933+0000] {logging_mixin.py:151} INFO - Error while geocoding Indianapolis, Indiana, United States: 'module' object is not callable
+[2024-11-18T08:26:55.934+0000] {logging_mixin.py:151} INFO - Error while geocoding São Paulo, São Paulo, Brazil: 'module' object is not callable
+[2024-11-18T08:26:55.934+0000] {logging_mixin.py:151} INFO - Error while geocoding St. Louis, United States: 'module' object is not callable
+[2024-11-18T08:26:55.934+0000] {logging_mixin.py:151} INFO - Error while geocoding Tabriz, Iran: 'module' object is not callable
+[2024-11-18T08:26:55.934+0000] {logging_mixin.py:151} INFO - Error while geocoding Seoul, South Korea: 'module' object is not callable
+[2024-11-18T08:26:55.934+0000] {logging_mixin.py:151} INFO - Error while geocoding Minneapolis, United States: 'module' object is not callable
+[2024-11-18T08:26:55.934+0000] {logging_mixin.py:151} INFO - Error while geocoding Daegu, South Korea: 'module' object is not callable
+[2024-11-18T08:26:55.935+0000] {logging_mixin.py:151} INFO - Error while geocoding Beijing, China: 'module' object is not callable
+[2024-11-18T08:26:55.935+0000] {logging_mixin.py:151} INFO - Error while geocoding London, England: 'module' object is not callable
+[2024-11-18T08:26:55.935+0000] {logging_mixin.py:151} INFO - Error while geocoding Tampa, Florida, United States: 'module' object is not callable
+[2024-11-18T08:26:55.935+0000] {logging_mixin.py:151} INFO - Error while geocoding Miami Gardens, Florida, United States: 'module' object is not callable
+[2024-11-18T08:26:55.935+0000] {logging_mixin.py:151} INFO - Error while geocoding Montreal, Quebec, Canada: 'module' object is not callable
+[2024-11-18T08:26:55.935+0000] {logging_mixin.py:151} INFO - Error while geocoding Basra, Iraq: 'module' object is not callable
+[2024-11-18T08:26:55.935+0000] {logging_mixin.py:151} INFO - Error while geocoding Orlando, Florida, United States: 'module' object is not callable
+[2024-11-18T08:26:55.936+0000] {logging_mixin.py:151} INFO - Error while geocoding San Antonio, United States: 'module' object is not callable
+[2024-11-18T08:26:55.936+0000] {logging_mixin.py:151} INFO - Error while geocoding Detroit, United States: 'module' object is not callable
+[2024-11-18T08:26:55.936+0000] {logging_mixin.py:151} INFO - Error while geocoding Tangier, Morocco: 'module' object is not callable
+[2024-11-18T08:26:55.936+0000] {logging_mixin.py:151} INFO - Error while geocoding Lisbon, Portugal: 'module' object is not callable
+[2024-11-18T08:26:55.936+0000] {logging_mixin.py:151} INFO - Error while geocoding Algiers, Algeria: 'module' object is not callable
+[2024-11-18T08:26:55.936+0000] {logging_mixin.py:151} INFO - Error while geocoding Fortaleza, Ceará, Brazil: 'module' object is not callable
+[2024-11-18T08:26:55.937+0000] {logging_mixin.py:151} INFO - Error while geocoding Saitama, Japan: 'module' object is not callable
+[2024-11-18T08:26:55.937+0000] {logging_mixin.py:151} INFO - Error while geocoding Johannesburg, Gauteng, South Africa: 'module' object is not callable
+[2024-11-18T08:26:55.937+0000] {logging_mixin.py:151} INFO - Error while geocoding London, England: 'module' object is not callable
+[2024-11-18T08:26:55.937+0000] {logging_mixin.py:151} INFO - Error while geocoding Gelsenkirchen, Germany: 'module' object is not callable
+[2024-11-18T08:26:55.937+0000] {logging_mixin.py:151} INFO - Error while geocoding Qingdao, Shandong, China: 'module' object is not callable
+[2024-11-18T08:26:55.937+0000] {logging_mixin.py:151} INFO - Error while geocoding Belo Horizonte, Minas Gerais, Brazil: 'module' object is not callable
+[2024-11-18T08:26:55.937+0000] {logging_mixin.py:151} INFO - Error while geocoding Riyadh, Saudi Arabia: 'module' object is not callable
+[2024-11-18T08:26:55.938+0000] {logging_mixin.py:151} INFO - Error while geocoding Chicago, United States: 'module' object is not callable
+[2024-11-18T08:26:55.938+0000] {logging_mixin.py:151} INFO - Error while geocoding Nanjing, Jiangsu, China: 'module' object is not callable
+[2024-11-18T08:26:55.938+0000] {logging_mixin.py:151} INFO - Error while geocoding Liverpool, England, England: 'module' object is not callable
+[2024-11-18T08:26:55.938+0000] {logging_mixin.py:151} INFO - Error while geocoding Seville, Spain: 'module' object is not callable
+[2024-11-18T08:26:55.938+0000] {logging_mixin.py:151} INFO - Error while geocoding Abuja, Nigeria: 'module' object is not callable
+[2024-11-18T08:26:55.938+0000] {logging_mixin.py:151} INFO - Error while geocoding Stuttgart, Germany: 'module' object is not callable
+[2024-11-18T08:26:55.939+0000] {logging_mixin.py:151} INFO - Error while geocoding Glasgow, Scotland: 'module' object is not callable
+[2024-11-18T08:26:55.939+0000] {logging_mixin.py:151} INFO - Error while geocoding Arequipa, Peru: 'module' object is not callable
+[2024-11-18T08:26:55.939+0000] {logging_mixin.py:151} INFO - Error while geocoding London, England: 'module' object is not callable
+[2024-11-18T08:26:55.939+0000] {logging_mixin.py:151} INFO - Error while geocoding Shenzhen, Guangdong, China: 'module' object is not callable
+[2024-11-18T08:26:55.939+0000] {logging_mixin.py:151} INFO - Error while geocoding Montevideo, Uruguay: 'module' object is not callable
+[2024-11-18T08:26:55.939+0000] {logging_mixin.py:151} INFO - Error while geocoding Recife, Pernambuco, Brazil: 'module' object is not callable
+[2024-11-18T08:26:55.939+0000] {logging_mixin.py:151} INFO - Error while geocoding Al-Khor, Qatar: 'module' object is not callable
+[2024-11-18T08:26:55.940+0000] {logging_mixin.py:151} INFO - Error while geocoding Dar es-Salaam, Tanzania: 'module' object is not callable
+[2024-11-18T08:26:55.940+0000] {logging_mixin.py:151} INFO - Error while geocoding Hefei, Anhui, China: 'module' object is not callable
+[2024-11-18T08:26:55.940+0000] {logging_mixin.py:151} INFO - Error while geocoding Kuwait City, Kuwait: 'module' object is not callable
+[2024-11-18T08:26:55.940+0000] {logging_mixin.py:151} INFO - Error while geocoding Tunis, Tunisia: 'module' object is not callable
+[2024-11-18T08:26:55.940+0000] {logging_mixin.py:151} INFO - Error while geocoding New Delhi, India: 'module' object is not callable
+[2024-11-18T08:26:55.940+0000] {logging_mixin.py:151} INFO - Error while geocoding Mogadishu, Somalia: 'module' object is not callable
+[2024-11-18T08:26:55.940+0000] {logging_mixin.py:151} INFO - Error while geocoding Lusaka, Zambia: 'module' object is not callable
+[2024-11-18T08:26:55.941+0000] {logging_mixin.py:151} INFO - Error while geocoding Eugene, Oregon, United States: 'module' object is not callable
+[2024-11-18T08:26:55.941+0000] {logging_mixin.py:151} INFO - Error while geocoding Mabopane, Gauteng, South Africa: 'module' object is not callable
+[2024-11-18T08:26:55.941+0000] {logging_mixin.py:151} INFO - Error while geocoding Phnom Penh, Cambodia: 'module' object is not callable
+[2024-11-18T08:26:55.941+0000] {logging_mixin.py:151} INFO - Error while geocoding Shenyang, Liaoning, China: 'module' object is not callable
+[2024-11-18T08:26:55.941+0000] {logging_mixin.py:151} INFO - Error while geocoding Perth, Western Australia, Australia: 'module' object is not callable
+[2024-11-18T08:26:55.941+0000] {logging_mixin.py:151} INFO - Error while geocoding Guayaquil, Ecuador: 'module' object is not callable
+[2024-11-18T08:26:55.941+0000] {logging_mixin.py:151} INFO - Error while geocoding Décines-Charpieu, France: 'module' object is not callable
+[2024-11-18T08:26:55.941+0000] {logging_mixin.py:151} INFO - Error while geocoding Chongqing, China: 'module' object is not callable
+[2024-11-18T08:26:55.942+0000] {logging_mixin.py:151} INFO - Error while geocoding Warsaw, Poland: 'module' object is not callable
+[2024-11-18T08:26:55.942+0000] {logging_mixin.py:151} INFO - Error while geocoding Bari, Apulia, Italy: 'module' object is not callable
+[2024-11-18T08:26:55.942+0000] {logging_mixin.py:151} INFO - Error while geocoding Landover, Maryland, United States: 'module' object is not callable
+[2024-11-18T08:26:55.942+0000] {logging_mixin.py:151} INFO - Error while geocoding Frankfurt, Germany: 'module' object is not callable
+[2024-11-18T08:26:55.942+0000] {logging_mixin.py:151} INFO - Error while geocoding Seville, Spain: 'module' object is not callable
+[2024-11-18T08:26:55.942+0000] {logging_mixin.py:151} INFO - Error while geocoding Raleigh, North Carolina, United States: 'module' object is not callable
+[2024-11-18T08:26:55.942+0000] {logging_mixin.py:151} INFO - Error while geocoding Buenos Aires, Argentina: 'module' object is not callable
+[2024-11-18T08:26:55.943+0000] {logging_mixin.py:151} INFO - Error while geocoding Hamburg, Germany: 'module' object is not callable
+[2024-11-18T08:26:55.943+0000] {logging_mixin.py:151} INFO - Error while geocoding Córdoba, Argentina: 'module' object is not callable
+[2024-11-18T08:26:55.943+0000] {logging_mixin.py:151} INFO - Error while geocoding Jinan, Shandong, China: 'module' object is not callable
+[2024-11-18T08:26:55.943+0000] {logging_mixin.py:151} INFO - Error while geocoding Guadalajara, Jalisco, Mexico: 'module' object is not callable
+[2024-11-18T08:26:55.943+0000] {logging_mixin.py:151} INFO - Error while geocoding Edmonton, Alberta, Canada: 'module' object is not callable
+[2024-11-18T08:26:55.943+0000] {logging_mixin.py:151} INFO - Error while geocoding Los Angeles, United States: 'module' object is not callable
+[2024-11-18T08:26:55.943+0000] {logging_mixin.py:151} INFO - Error while geocoding Annaba, Algeria: 'module' object is not callable
+[2024-11-18T08:26:55.944+0000] {logging_mixin.py:151} INFO - Error while geocoding Barcelona, Catalonia, Spain: 'module' object is not callable
+[2024-11-18T08:26:55.944+0000] {logging_mixin.py:151} INFO - Error while geocoding Porto Alegre, Rio Grande do Sul, Brazil: 'module' object is not callable
+[2024-11-18T08:26:55.944+0000] {logging_mixin.py:151} INFO - Error while geocoding Bucharest, Romania: 'module' object is not callable
+[2024-11-18T08:26:55.944+0000] {logging_mixin.py:151} INFO - Error while geocoding Belgrade, Serbia: 'module' object is not callable
+[2024-11-18T08:26:55.944+0000] {logging_mixin.py:151} INFO - Error while geocoding Chorzów, Poland: 'module' object is not callable
+[2024-11-18T08:26:55.944+0000] {logging_mixin.py:151} INFO - Error while geocoding Manchester, North West England, England: 'module' object is not callable
+[2024-11-18T08:26:55.945+0000] {logging_mixin.py:151} INFO - Error while geocoding Valencia, Spain: 'module' object is not callable
+[2024-11-18T08:26:55.945+0000] {logging_mixin.py:151} INFO - Error while geocoding Singapore, Singapore: 'module' object is not callable
+[2024-11-18T08:26:55.945+0000] {logging_mixin.py:151} INFO - Error while geocoding Kaohsiung, Taiwan: 'module' object is not callable
+[2024-11-18T08:26:55.945+0000] {logging_mixin.py:151} INFO - Error while geocoding Changsha, Hunan, China: 'module' object is not callable
+[2024-11-18T08:26:55.945+0000] {logging_mixin.py:151} INFO - Error while geocoding Cape Town, Western Cape, South Africa: 'module' object is not callable
+[2024-11-18T08:26:55.945+0000] {logging_mixin.py:151} INFO - Error while geocoding Plovdiv, Bulgaria: 'module' object is not callable
+[2024-11-18T08:26:55.945+0000] {logging_mixin.py:151} INFO - Error while geocoding Atlanta, United States: 'module' object is not callable
+[2024-11-18T08:26:55.946+0000] {logging_mixin.py:151} INFO - Error while geocoding Amsterdam, Netherlands: 'module' object is not callable
+[2024-11-18T08:26:55.946+0000] {logging_mixin.py:151} INFO - Error while geocoding Guangzhou, Guangdong, China: 'module' object is not callable
+[2024-11-18T08:26:55.946+0000] {logging_mixin.py:151} INFO - Error while geocoding Naples, Italy: 'module' object is not callable
+[2024-11-18T08:26:55.946+0000] {logging_mixin.py:151} INFO - Error while geocoding Tianjin, China: 'module' object is not callable
+[2024-11-18T08:26:55.946+0000] {logging_mixin.py:151} INFO - Error while geocoding Düsseldorf, Germany: 'module' object is not callable
+[2024-11-18T08:26:55.946+0000] {logging_mixin.py:151} INFO - Error while geocoding Tbilisi, Georgia: 'module' object is not callable
+[2024-11-18T08:26:55.946+0000] {logging_mixin.py:151} INFO - Error while geocoding Wuhan, Hubei, China: 'module' object is not callable
+[2024-11-18T08:26:55.947+0000] {logging_mixin.py:151} INFO - Error while geocoding Vancouver, British Columbia, Canada: 'module' object is not callable
+[2024-11-18T08:26:55.947+0000] {logging_mixin.py:151} INFO - Error while geocoding New York City, United States: 'module' object is not callable
+[2024-11-18T08:26:55.947+0000] {logging_mixin.py:151} INFO - Error while geocoding Yerevan, Armenia: 'module' object is not callable
+[2024-11-18T08:26:55.947+0000] {logging_mixin.py:151} INFO - Error while geocoding Mönchengladbach, Germany: 'module' object is not callable
+[2024-11-18T08:26:55.947+0000] {logging_mixin.py:151} INFO - Error while geocoding Durban, KwaZulu-Natal, South Africa: 'module' object is not callable
+[2024-11-18T08:26:55.947+0000] {logging_mixin.py:151} INFO - Error while geocoding Busan, South Korea: 'module' object is not callable
+[2024-11-18T08:26:55.947+0000] {logging_mixin.py:151} INFO - Error while geocoding Belém, Pará, Brazil: 'module' object is not callable
+[2024-11-18T08:26:55.948+0000] {logging_mixin.py:151} INFO - Error while geocoding La Plata, Argentina: 'module' object is not callable
+[2024-11-18T08:26:55.948+0000] {logging_mixin.py:151} INFO - Error while geocoding Adelaide, South Australia, Australia: 'module' object is not callable
+[2024-11-18T08:26:55.948+0000] {logging_mixin.py:151} INFO - Error while geocoding Melbourne, Victoria, Australia: 'module' object is not callable
+[2024-11-18T08:26:55.948+0000] {logging_mixin.py:151} INFO - Error while geocoding Uberlândia, Minas Gerais, Brazil: 'module' object is not callable
+[2024-11-18T08:26:55.948+0000] {logging_mixin.py:151} INFO - Error while geocoding Bilbao, Spain: 'module' object is not callable
+[2024-11-18T08:26:55.948+0000] {logging_mixin.py:151} INFO - Error while geocoding Aleppo, Syria: 'module' object is not callable
+[2024-11-18T08:26:55.948+0000] {logging_mixin.py:151} INFO - Error while geocoding Lima, Peru: 'module' object is not callable
+[2024-11-18T08:26:55.949+0000] {logging_mixin.py:151} INFO - Error while geocoding Hangzhou, Zhejiang, China: 'module' object is not callable
+[2024-11-18T08:26:55.949+0000] {logging_mixin.py:151} INFO - Error while geocoding Istanbul, Turkey: 'module' object is not callable
+[2024-11-18T08:26:55.949+0000] {logging_mixin.py:151} INFO - Error while geocoding Brisbane, Queensland, Australia: 'module' object is not callable
+[2024-11-18T08:26:55.949+0000] {logging_mixin.py:151} INFO - Error while geocoding Newcastle upon Tyne, North East, England: 'module' object is not callable
+[2024-11-18T08:26:55.949+0000] {logging_mixin.py:151} INFO - Error while geocoding Durban, KwaZulu-Natal, South Africa: 'module' object is not callable
+[2024-11-18T08:26:55.949+0000] {logging_mixin.py:151} INFO - Error while geocoding Cape Town, Western Cape, South Africa: 'module' object is not callable
+[2024-11-18T08:26:55.950+0000] {logging_mixin.py:151} INFO - Error while geocoding Glasgow, Scotland: 'module' object is not callable
+[2024-11-18T08:26:55.950+0000] {logging_mixin.py:151} INFO - Error while geocoding Maturín, Venezuela: 'module' object is not callable
+[2024-11-18T08:26:55.950+0000] {logging_mixin.py:151} INFO - Error while geocoding Pretoria, Gauteng, South Africa: 'module' object is not callable
+[2024-11-18T08:26:55.950+0000] {logging_mixin.py:151} INFO - Error while geocoding Dublin, Ireland: 'module' object is not callable
+[2024-11-18T08:26:55.950+0000] {logging_mixin.py:151} INFO - Error while geocoding Guiyang, Guizhou, China: 'module' object is not callable
+[2024-11-18T08:26:55.950+0000] {logging_mixin.py:151} INFO - Error while geocoding Hohhot, Inner Mongolia, China: 'module' object is not callable
+[2024-11-18T08:26:55.950+0000] {logging_mixin.py:151} INFO - Error while geocoding Bangkok, Thailand: 'module' object is not callable
+[2024-11-18T08:26:55.951+0000] {logging_mixin.py:151} INFO - Error while geocoding Donetsk, Ukraine: 'module' object is not callable
+[2024-11-18T08:26:55.951+0000] {logging_mixin.py:151} INFO - Error while geocoding Avellaneda, Argentina: 'module' object is not callable
+[2024-11-18T08:26:55.951+0000] {logging_mixin.py:151} INFO - Error while geocoding İzmir, Turkey: 'module' object is not callable
+[2024-11-18T08:26:55.951+0000] {logging_mixin.py:151} INFO - Error while geocoding Rotterdam, Netherlands: 'module' object is not callable
+[2024-11-18T08:26:55.951+0000] {logging_mixin.py:151} INFO - Error while geocoding Monterrey, Mexico: 'module' object is not callable
+[2024-11-18T08:26:55.951+0000] {logging_mixin.py:151} INFO - Error while geocoding Ahvaz, Iran: 'module' object is not callable
+[2024-11-18T08:26:55.951+0000] {logging_mixin.py:151} INFO - Error while geocoding Porto Alegre. Rio Grande do Sul, Brazil: 'module' object is not callable
+[2024-11-18T08:26:55.952+0000] {logging_mixin.py:151} INFO - Error while geocoding Glasgow, Scotland: 'module' object is not callable
+[2024-11-18T08:26:55.952+0000] {logging_mixin.py:151} INFO - Error while geocoding Fukuroi, Shizuoka, Japan: 'module' object is not callable
+[2024-11-18T08:26:55.952+0000] {logging_mixin.py:151} INFO - Error while geocoding Vienna, Austria: 'module' object is not callable
+[2024-11-18T08:26:55.952+0000] {logging_mixin.py:151} INFO - Error while geocoding Minneapolis, United States: 'module' object is not callable
+[2024-11-18T08:26:55.952+0000] {logging_mixin.py:151} INFO - Error while geocoding Puebla, Mexico: 'module' object is not callable
+[2024-11-18T08:26:55.952+0000] {logging_mixin.py:151} INFO - Error while geocoding Solna, Sweden: 'module' object is not callable
+[2024-11-18T08:26:55.952+0000] {logging_mixin.py:151} INFO - Error while geocoding Istanbul, Turkey: 'module' object is not callable
+[2024-11-18T08:26:55.953+0000] {logging_mixin.py:151} INFO - Error while geocoding Palo Alto, California, United States: 'module' object is not callable
+[2024-11-18T08:26:55.953+0000] {logging_mixin.py:151} INFO - Error while geocoding Villeneuve-d'Ascq, France: 'module' object is not callable
+[2024-11-18T08:26:55.953+0000] {logging_mixin.py:151} INFO - Error while geocoding Brussels, Belgium: 'module' object is not callable
+[2024-11-18T08:26:55.953+0000] {logging_mixin.py:151} INFO - Error while geocoding Xi'an, Shaanxi, China: 'module' object is not callable
+[2024-11-18T08:26:55.953+0000] {logging_mixin.py:151} INFO - Error while geocoding Chofu, Tokyo, Japan: 'module' object is not callable
+[2024-11-18T08:26:55.953+0000] {logging_mixin.py:151} INFO - Error while geocoding Lisbon, Portugal: 'module' object is not callable
+[2024-11-18T08:26:55.953+0000] {logging_mixin.py:151} INFO - Error while geocoding Porto, Portugal: 'module' object is not callable
+[2024-11-18T08:26:55.954+0000] {logging_mixin.py:151} INFO - Error while geocoding Salvador, Bahia, Brazil: 'module' object is not callable
+[2024-11-18T08:26:55.954+0000] {logging_mixin.py:151} INFO - Error while geocoding Sousse, Tunisia: 'module' object is not callable
+[2024-11-18T08:26:55.954+0000] {logging_mixin.py:151} INFO - Error while geocoding Cologne, Germany: 'module' object is not callable
+[2024-11-18T08:26:55.954+0000] {logging_mixin.py:151} INFO - Error while geocoding Harbin, Heilongjiang, China: 'module' object is not callable
+[2024-11-18T08:26:55.954+0000] {logging_mixin.py:151} INFO - Error while geocoding Trivandrum, India: 'module' object is not callable
+[2024-11-18T08:26:55.954+0000] {logging_mixin.py:151} INFO - Error while geocoding Kozhikode, India: 'module' object is not callable
+[2024-11-18T08:26:55.955+0000] {logging_mixin.py:151} INFO - Error while geocoding Lucknow, India: 'module' object is not callable
+[2024-11-18T08:26:55.955+0000] {logging_mixin.py:151} INFO - Error while geocoding Auckland, New Zealand: 'module' object is not callable
+[2024-11-18T08:26:55.955+0000] {logging_mixin.py:151} INFO - Error while geocoding Luanda, Angola: 'module' object is not callable
+[2024-11-18T08:26:55.955+0000] {logging_mixin.py:151} INFO - Error while geocoding Zhengzhou, Henan, China: 'module' object is not callable
+[2024-11-18T08:26:55.955+0000] {logging_mixin.py:151} INFO - Error while geocoding Nanchang, Jiangxi, China: 'module' object is not callable
+[2024-11-18T08:26:55.955+0000] {logging_mixin.py:151} INFO - Error while geocoding Nuremberg, Germany: 'module' object is not callable
+[2024-11-18T08:26:55.955+0000] {logging_mixin.py:151} INFO - Error while geocoding Tripoli, Libya: 'module' object is not callable
+[2024-11-18T08:26:55.955+0000] {logging_mixin.py:151} INFO - Error while geocoding Urumqi, Xinjiang, China: 'module' object is not callable
+[2024-11-18T08:26:55.956+0000] {logging_mixin.py:151} INFO - Error while geocoding Pyongyang, North Korea: 'module' object is not callable
+[2024-11-18T08:26:55.956+0000] {logging_mixin.py:151} INFO - Error while geocoding Hiroshima, Japan: 'module' object is not callable
+[2024-11-18T08:26:55.956+0000] {logging_mixin.py:151} INFO - Error while geocoding Shiraz, Iran: 'module' object is not callable
+[2024-11-18T08:26:55.956+0000] {logging_mixin.py:151} INFO - Error while geocoding Bamako, Mali: 'module' object is not callable
+[2024-11-18T08:26:55.956+0000] {logging_mixin.py:151} INFO - Error while geocoding Dakar, Senegal: 'module' object is not callable
+[2024-11-18T08:26:55.956+0000] {logging_mixin.py:151} INFO - Error while geocoding Kuala Terengganu, Malaysia: 'module' object is not callable
+[2024-11-18T08:26:55.956+0000] {logging_mixin.py:151} INFO - Error while geocoding Guadalajara, Mexico: 'module' object is not callable
+[2024-11-18T08:26:55.957+0000] {logging_mixin.py:151} INFO - Error while geocoding Lusaka, Zambia: 'module' object is not callable
+[2024-11-18T08:26:55.957+0000] {logging_mixin.py:151} INFO - Error while geocoding Kaiserslautern, Germany: 'module' object is not callable
+[2024-11-18T08:26:55.957+0000] {logging_mixin.py:151} INFO - Error while geocoding Buenos Aires, Argentina: 'module' object is not callable
+[2024-11-18T08:26:55.957+0000] {logging_mixin.py:151} INFO - Error while geocoding Beirut, Lebanon: 'module' object is not callable
+[2024-11-18T08:26:55.957+0000] {logging_mixin.py:151} INFO - Error while geocoding Rifu, Miyagi, Japan: 'module' object is not callable
+[2024-11-18T08:26:55.957+0000] {logging_mixin.py:151} INFO - Error while geocoding Incheon, South Korea: 'module' object is not callable
+[2024-11-18T08:26:55.957+0000] {logging_mixin.py:151} INFO - Error while geocoding Hanover, Germany: 'module' object is not callable
+[2024-11-18T08:26:55.958+0000] {logging_mixin.py:151} INFO - Error while geocoding Paris, France: 'module' object is not callable
+[2024-11-18T08:26:55.958+0000] {logging_mixin.py:151} INFO - Error while geocoding Sunderland, Tyne and Wear, England: 'module' object is not callable
+[2024-11-18T08:26:55.958+0000] {logging_mixin.py:151} INFO - Error while geocoding Santiago, Chile: 'module' object is not callable
+[2024-11-18T08:26:55.958+0000] {logging_mixin.py:151} INFO - Error while geocoding Port Elizabeth, Eastern Cape, South Africa: 'module' object is not callable
+[2024-11-18T08:26:55.958+0000] {logging_mixin.py:151} INFO - Error while geocoding Buenos Aires, Argentina: 'module' object is not callable
+[2024-11-18T08:26:55.958+0000] {logging_mixin.py:151} INFO - Error while geocoding Islamabad, Pakistan: 'module' object is not callable
+[2024-11-18T08:26:55.958+0000] {logging_mixin.py:151} INFO - Error while geocoding Avellaneda, Argentina: 'module' object is not callable
+[2024-11-18T08:26:55.959+0000] {logging_mixin.py:151} INFO - Error while geocoding Bloemfontein, Free State, South Africa: 'module' object is not callable
+[2024-11-18T08:26:55.959+0000] {logging_mixin.py:151} INFO - Error while geocoding Osaka, Japan: 'module' object is not callable
+[2024-11-18T08:26:55.959+0000] {logging_mixin.py:151} INFO - Error while geocoding São Paulo, São Paulo, Brazil: 'module' object is not callable
+[2024-11-18T08:26:55.959+0000] {logging_mixin.py:151} INFO - Error while geocoding Toronto, Ontario, Canada: 'module' object is not callable
+[2024-11-18T08:26:55.959+0000] {logging_mixin.py:151} INFO - Error while geocoding Santiago, Chile: 'module' object is not callable
+[2024-11-18T08:26:55.959+0000] {logging_mixin.py:151} INFO - Error while geocoding Florence, Italy: 'module' object is not callable
+[2024-11-18T08:26:55.959+0000] {logging_mixin.py:151} INFO - Error while geocoding Lanús, Argentina: 'module' object is not callable
+[2024-11-18T08:26:55.960+0000] {logging_mixin.py:151} INFO - Error while geocoding Barranquilla, Colombia: 'module' object is not callable
+[2024-11-18T08:26:55.960+0000] {logging_mixin.py:151} INFO - Error while geocoding Rio de Janeiro, Rio de Janeiro, Brazil: 'module' object is not callable
+[2024-11-18T08:26:55.960+0000] {logging_mixin.py:151} INFO - Error while geocoding São Lourenço da Mata, Pernambuco, Brazil: 'module' object is not callable
+[2024-11-18T08:26:55.960+0000] {logging_mixin.py:151} INFO - Error while geocoding Belo Horizonte, Minas Gerais, Brazil: 'module' object is not callable
+[2024-11-18T08:26:55.960+0000] {logging_mixin.py:151} INFO - Error while geocoding Presidente Prudente, São Paulo, Brazil: 'module' object is not callable
+[2024-11-18T08:26:55.960+0000] {logging_mixin.py:151} INFO - Error while geocoding Medellín, Colombia: 'module' object is not callable
+[2024-11-18T08:26:55.960+0000] {logging_mixin.py:151} INFO - Error while geocoding Seville, Spain: 'module' object is not callable
+[2024-11-18T08:26:55.961+0000] {logging_mixin.py:151} INFO - Error while geocoding Agadir, Morocco: 'module' object is not callable
+[2024-11-18T08:26:55.961+0000] {logging_mixin.py:151} INFO - Error while geocoding Moscow, Russia: 'module' object is not callable
+[2024-11-18T08:26:55.961+0000] {logging_mixin.py:151} INFO - Error while geocoding Marrakesh, Morocco: 'module' object is not callable
+[2024-11-18T08:26:55.961+0000] {logging_mixin.py:151} INFO - Error while geocoding Kampala, Uganda: 'module' object is not callable
+[2024-11-18T08:26:55.961+0000] {logging_mixin.py:151} INFO - Error while geocoding Wrocław, Poland: 'module' object is not callable
+[2024-11-18T08:26:55.961+0000] {logging_mixin.py:151} INFO - Error while geocoding Kazan, Russia: 'module' object is not callable
+[2024-11-18T08:26:55.961+0000] {logging_mixin.py:151} INFO - Error while geocoding Cusco, Peru: 'module' object is not callable
+[2024-11-18T08:26:55.962+0000] {logging_mixin.py:151} INFO - Error while geocoding Maputo, Mozambique: 'module' object is not callable
+[2024-11-18T08:26:55.962+0000] {logging_mixin.py:151} INFO - Error while geocoding Surabaya, East Java, Indonesia: 'module' object is not callable
+[2024-11-18T08:26:55.962+0000] {logging_mixin.py:151} INFO - Error while geocoding Banda Aceh, Aceh, Indonesia: 'module' object is not callable
+[2024-11-18T08:26:55.962+0000] {logging_mixin.py:151} INFO - Error while geocoding Asunción, Paraguay: 'module' object is not callable
+[2024-11-18T08:26:55.962+0000] {logging_mixin.py:151} INFO - Error while geocoding Casablanca, Morocco: 'module' object is not callable
+[2024-11-18T08:26:55.962+0000] {logging_mixin.py:151} INFO - Error while geocoding Latakia, Syria: 'module' object is not callable
+[2024-11-18T08:26:55.962+0000] {logging_mixin.py:151} INFO - Error while geocoding Zibo, Shandong, China: 'module' object is not callable
+[2024-11-18T08:26:55.963+0000] {logging_mixin.py:151} INFO - Error while geocoding Weifang, Shandong, China: 'module' object is not callable
+[2024-11-18T08:26:55.963+0000] {logging_mixin.py:151} INFO - Error while geocoding Yantai, Shandong, China: 'module' object is not callable
+[2024-11-18T08:26:55.963+0000] {logging_mixin.py:151} INFO - Error while geocoding Seremban, Malaysia: 'module' object is not callable
+[2024-11-18T08:26:55.963+0000] {logging_mixin.py:151} INFO - Error while geocoding Fes, Morocco: 'module' object is not callable
+[2024-11-18T08:26:55.963+0000] {logging_mixin.py:151} INFO - Error while geocoding Lagos, Nigeria: 'module' object is not callable
+[2024-11-18T08:26:55.963+0000] {logging_mixin.py:151} INFO - Error while geocoding Suez, Egypt: 'module' object is not callable
+[2024-11-18T08:26:55.963+0000] {logging_mixin.py:151} INFO - Error while geocoding Toyota City, Aichi, Japan: 'module' object is not callable
+[2024-11-18T08:26:55.964+0000] {logging_mixin.py:151} INFO - Error while geocoding Abu Dhabi, United Arab Emirates: 'module' object is not callable
+[2024-11-18T08:26:55.964+0000] {logging_mixin.py:151} INFO - Error while geocoding Leipzig, Germany: 'module' object is not callable
+[2024-11-18T08:26:55.964+0000] {logging_mixin.py:151} INFO - Error while geocoding Teresina, Brazil: 'module' object is not callable
+[2024-11-18T08:26:55.964+0000] {logging_mixin.py:151} INFO - Error while geocoding Campo Grande, Mato Grosso do Sul, Brazil: 'module' object is not callable
+[2024-11-18T08:26:55.964+0000] {logging_mixin.py:151} INFO - Error while geocoding Ulsan, South Korea: 'module' object is not callable
+[2024-11-18T08:26:55.964+0000] {logging_mixin.py:151} INFO - Error while geocoding Cuiabá, Mato Grosso, Brazil: 'module' object is not callable
+[2024-11-18T08:26:55.964+0000] {logging_mixin.py:151} INFO - Error while geocoding Manaus, Amazonas, Brazil: 'module' object is not callable
+[2024-11-18T08:26:55.965+0000] {logging_mixin.py:151} INFO - Error while geocoding Suwon, South Korea: 'module' object is not callable
+[2024-11-18T08:26:55.965+0000] {logging_mixin.py:151} INFO - Error while geocoding Pekanbaru, Riau, Indonesia: 'module' object is not callable
+[2024-11-18T08:26:55.965+0000] {logging_mixin.py:151} INFO - Error while geocoding São Paulo, São Paulo, Brazil: 'module' object is not callable
+[2024-11-18T08:26:55.965+0000] {logging_mixin.py:151} INFO - Error while geocoding Jinan, Shandong, China: 'module' object is not callable
+[2024-11-18T08:26:55.965+0000] {logging_mixin.py:151} INFO - Error while geocoding Gdańsk, Poland: 'module' object is not callable
+[2024-11-18T08:26:55.965+0000] {logging_mixin.py:151} INFO - Error while geocoding Buenos Aires, Argentina: 'module' object is not callable
+[2024-11-18T08:26:55.965+0000] {logging_mixin.py:151} INFO - Error while geocoding Poznań, Poland: 'module' object is not callable
+[2024-11-18T08:26:55.966+0000] {logging_mixin.py:151} INFO - Error while geocoding Sofia, Bulgaria: 'module' object is not callable
+[2024-11-18T08:26:55.966+0000] {logging_mixin.py:151} INFO - Error while geocoding Lima, Peru: 'module' object is not callable
+[2024-11-18T08:26:55.966+0000] {logging_mixin.py:151} INFO - Error while geocoding Gothenburg, Sweden: 'module' object is not callable
+[2024-11-18T08:26:55.966+0000] {logging_mixin.py:151} INFO - Error while geocoding Jinzhou, China: 'module' object is not callable
+[2024-11-18T08:26:55.966+0000] {logging_mixin.py:151} INFO - Error while geocoding Cúcuta, Colombia: 'module' object is not callable
+[2024-11-18T08:26:55.966+0000] {logging_mixin.py:151} INFO - Error while geocoding Birmingham, West Midlands, England: 'module' object is not callable
+[2024-11-18T08:26:55.966+0000] {logging_mixin.py:151} INFO - Error while geocoding Perak, Malaysia: 'module' object is not callable
+[2024-11-18T08:26:55.967+0000] {logging_mixin.py:151} INFO - Error while geocoding Jeonju, South Korea: 'module' object is not callable
+[2024-11-18T08:26:55.967+0000] {logging_mixin.py:151} INFO - Error while geocoding Curitiba, Paraná, Brazil: 'module' object is not callable
+[2024-11-18T08:26:55.967+0000] {logging_mixin.py:151} INFO - Error while geocoding Bremen, Germany: 'module' object is not callable
+[2024-11-18T08:26:55.967+0000] {logging_mixin.py:151} INFO - Error while geocoding Niigata, Niigata, Japan: 'module' object is not callable
+[2024-11-18T08:26:55.967+0000] {logging_mixin.py:151} INFO - Error while geocoding Mérida, Venezuela: 'module' object is not callable
+[2024-11-18T08:26:55.967+0000] {logging_mixin.py:151} INFO - Error while geocoding Daejeon, South Korea: 'module' object is not callable
+[2024-11-18T08:26:55.967+0000] {logging_mixin.py:151} INFO - Error while geocoding Bordeaux, France: 'module' object is not callable
+[2024-11-18T08:26:55.968+0000] {logging_mixin.py:151} INFO - Error while geocoding Helsinki, Finland: 'module' object is not callable
+[2024-11-18T08:26:55.968+0000] {logging_mixin.py:151} INFO - Error while geocoding Goiânia, Goiás, Brazil: 'module' object is not callable
+[2024-11-18T08:26:55.968+0000] {logging_mixin.py:151} INFO - Error while geocoding Cali, Colombia: 'module' object is not callable
+[2024-11-18T08:26:55.968+0000] {logging_mixin.py:151} INFO - Error while geocoding Guayaquil, Ecuador: 'module' object is not callable
+[2024-11-18T08:26:55.968+0000] {logging_mixin.py:151} INFO - Error while geocoding Maputo, Mozambique: 'module' object is not callable
+[2024-11-18T08:26:55.968+0000] {logging_mixin.py:151} INFO - Error while geocoding Chengdu, Sichuan, China: 'module' object is not callable
+[2024-11-18T08:26:55.968+0000] {logging_mixin.py:151} INFO - Error while geocoding Phokeng, North West, South Africa: 'module' object is not callable
+[2024-11-18T08:26:55.969+0000] {logging_mixin.py:151} INFO - Error while geocoding San Nicolás de los Garza, Mexico: 'module' object is not callable
+[2024-11-18T08:26:55.969+0000] {logging_mixin.py:151} INFO - Error while geocoding Santa Fe, Argentina: 'module' object is not callable
+[2024-11-18T08:26:55.969+0000] {logging_mixin.py:151} INFO - Error while geocoding Rosario, Argentina: 'module' object is not callable
+[2024-11-18T08:26:55.969+0000] {logging_mixin.py:151} INFO - Error while geocoding Saint-Étienne, France: 'module' object is not callable
+[2024-11-18T08:26:55.969+0000] {logging_mixin.py:151} INFO - Error while geocoding Istanbul, Turkey: 'module' object is not callable
+[2024-11-18T08:26:55.969+0000] {logging_mixin.py:151} INFO - Error while geocoding Polokwane, South Africa: 'module' object is not callable
+[2024-11-18T08:26:55.969+0000] {logging_mixin.py:151} INFO - Error while geocoding Rosario, Argentina: 'module' object is not callable
+[2024-11-18T08:26:55.970+0000] {logging_mixin.py:151} INFO - Error while geocoding Ciudad Guayana, Venezuela: 'module' object is not callable
+[2024-11-18T08:26:55.970+0000] {logging_mixin.py:151} INFO - Error while geocoding Quito, Ecuador: 'module' object is not callable
+[2024-11-18T08:26:55.970+0000] {logging_mixin.py:151} INFO - Error while geocoding Turin, Piedmont, Italy: 'module' object is not callable
+[2024-11-18T08:26:55.970+0000] {logging_mixin.py:151} INFO - Error while geocoding Sapporo, Hokkaido, Japan: 'module' object is not callable
+[2024-11-18T08:26:55.970+0000] {logging_mixin.py:151} INFO - Error while geocoding London, England: 'module' object is not callable
+[2024-11-18T08:26:55.970+0000] {logging_mixin.py:151} INFO - Error while geocoding Goyang, South Korea: 'module' object is not callable
+[2024-11-18T08:26:55.971+0000] {logging_mixin.py:151} INFO - Error while geocoding La Paz, Bolivia: 'module' object is not callable
+[2024-11-18T08:26:55.971+0000] {logging_mixin.py:151} INFO - Error while geocoding Lilongwe, Malawi: 'module' object is not callable
+[2024-11-18T08:26:55.971+0000] {logging_mixin.py:151} INFO - Error while geocoding Nelspruit, Mpumalanga, South Africa: 'module' object is not callable
+[2024-11-18T08:26:55.971+0000] {logging_mixin.py:151} INFO - Error while geocoding Maracaibo, Venezuela: 'module' object is not callable
+[2024-11-18T08:26:55.971+0000] {logging_mixin.py:151} INFO - Error while geocoding Algiers, Algeria: 'module' object is not callable
+[2024-11-18T08:26:55.971+0000] {logging_mixin.py:151} INFO - Error while geocoding Kashima, Ibaraki, Japan: 'module' object is not callable
+[2024-11-18T08:26:55.971+0000] {logging_mixin.py:151} INFO - Error while geocoding Kumasi, Ghana: 'module' object is not callable
+[2024-11-18T08:26:55.972+0000] {logging_mixin.py:151} INFO - Error while geocoding Curitiba, Paraná, Brazil: 'module' object is not callable
+[2024-11-18T08:26:55.972+0000] {logging_mixin.py:151} INFO - Error while geocoding Barcelona, Spain: 'module' object is not callable
+[2024-11-18T08:26:55.972+0000] {logging_mixin.py:151} INFO - Error while geocoding Barquisimeto, Venezuela: 'module' object is not callable
+[2024-11-18T08:26:55.972+0000] {logging_mixin.py:151} INFO - Error while geocoding Mendoza, Argentina: 'module' object is not callable
+[2024-11-18T08:26:55.972+0000] {logging_mixin.py:151} INFO - Error while geocoding Nolokla, Indonesia: 'module' object is not callable
+[2024-11-18T08:26:55.972+0000] {logging_mixin.py:151} INFO - Error while geocoding Gwangju, South Korea: 'module' object is not callable
+[2024-11-18T08:26:55.972+0000] {logging_mixin.py:151} INFO - Error while geocoding Hanoi, Vietnam: 'module' object is not callable
+[2024-11-18T08:26:55.972+0000] {logging_mixin.py:151} INFO - Error while geocoding Liverpool, North West, England: 'module' object is not callable
+[2024-11-18T08:26:55.973+0000] {logging_mixin.py:151} INFO - Error while geocoding São Luís, Maranhão, Brazil: 'module' object is not callable
+[2024-11-18T08:26:55.973+0000] {logging_mixin.py:151} INFO - Error while geocoding Oran, Algeria: 'module' object is not callable
+[2024-11-18T08:26:55.973+0000] {logging_mixin.py:151} INFO - Error while geocoding Montevideo, Uruguay: 'module' object is not callable
+[2024-11-18T08:26:55.973+0000] {logging_mixin.py:151} INFO - Error while geocoding Kharkiv, Ukraine: 'module' object is not callable
+[2024-11-18T08:26:55.973+0000] {logging_mixin.py:151} INFO - Error while geocoding Al-Wakrah, Qatar: 'module' object is not callable
+[2024-11-18T08:26:55.973+0000] {logging_mixin.py:151} INFO - Error while geocoding Al-Thumama, Qatar: 'module' object is not callable
+[2024-11-18T08:26:55.974+0000] {logging_mixin.py:151} INFO - Error while geocoding Oran, Algeria: 'module' object is not callable
+[2024-11-18T08:26:55.974+0000] {logging_mixin.py:151} INFO - Error while geocoding Balikpapan, East Kalimantan, Indonesia: 'module' object is not callable
+[2024-11-18T08:26:55.974+0000] {logging_mixin.py:151} INFO - Error while geocoding Gresik, East Java, Indonesia: 'module' object is not callable
+[2024-11-18T08:26:55.974+0000] {logging_mixin.py:151} INFO - Error while geocoding Sochi, Russia: 'module' object is not callable
+[2024-11-18T08:26:55.974+0000] {logging_mixin.py:151} INFO - Error while geocoding East Hartford, Connecticut, United States: 'module' object is not callable
+[2024-11-18T08:26:55.974+0000] {logging_mixin.py:151} INFO - Error while geocoding Kochi, India: 'module' object is not callable
+[2024-11-18T08:26:55.974+0000] {logging_mixin.py:151} INFO - Error while geocoding Malacca, Malaysia: 'module' object is not callable
+[2024-11-18T08:26:55.974+0000] {logging_mixin.py:151} INFO - Error while geocoding So Kon Po, Hong Kong: 'module' object is not callable
+[2024-11-18T08:26:55.975+0000] {logging_mixin.py:151} INFO - Error while geocoding Batu Kawan, Malaysia: 'module' object is not callable
+[2024-11-18T08:26:55.975+0000] {logging_mixin.py:151} INFO - Error while geocoding Accra, Ghana: 'module' object is not callable
+[2024-11-18T08:26:55.975+0000] {logging_mixin.py:151} INFO - Error while geocoding Kuching, Malaysia: 'module' object is not callable
+[2024-11-18T08:26:55.975+0000] {logging_mixin.py:151} INFO - Error while geocoding Yangon, Myanmar: 'module' object is not callable
+[2024-11-18T08:26:55.975+0000] {logging_mixin.py:151} INFO - Error while geocoding Ōita, Japan: 'module' object is not callable
+[2024-11-18T08:26:55.975+0000] {logging_mixin.py:151} INFO - Error while geocoding Kuantan, Malaysia: 'module' object is not callable
+[2024-11-18T08:26:55.976+0000] {logging_mixin.py:151} INFO - Error while geocoding Doha, Qatar: 'module' object is not callable
+[2024-11-18T08:26:55.976+0000] {logging_mixin.py:151} INFO - Error while geocoding Libreville, Gabon: 'module' object is not callable
+[2024-11-18T08:26:55.976+0000] {logging_mixin.py:151} INFO - Error while geocoding Karachi, Pakistan: 'module' object is not callable
+[2024-11-18T08:26:55.976+0000] {logging_mixin.py:151} INFO - Error while geocoding Jamshedpur, India: 'module' object is not callable
+[2024-11-18T08:26:55.976+0000] {logging_mixin.py:151} INFO - Error while geocoding Shenzhen, Guangdong, China: 'module' object is not callable
+[2024-11-18T08:26:55.976+0000] {logging_mixin.py:151} INFO - Error while geocoding Kunming, Yunnan, China: 'module' object is not callable
+[2024-11-18T08:26:55.976+0000] {logging_mixin.py:151} INFO - Error while geocoding Taizhou, Zhejiang, China: 'module' object is not callable
+[2024-11-18T08:26:55.977+0000] {logging_mixin.py:151} INFO - Error while geocoding Wuhu, Anhui, China: 'module' object is not callable
+[2024-11-18T08:26:55.977+0000] {logging_mixin.py:151} INFO - Error while geocoding Huizhou, Guangdong, China: 'module' object is not callable
+[2024-11-18T08:26:55.989+0000] {python.py:194} INFO - Done. Returned value was: OK
+[2024-11-18T08:26:55.999+0000] {taskinstance.py:1398} INFO - Marking task as SUCCESS. dag_id=wikipedia_flow, task_id=transfrom_wikipedia_data, execution_date=20241118T082651, start_date=20241118T082655, end_date=20241118T082655
+[2024-11-18T08:26:56.044+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2024-11-18T08:26:56.056+0000] {taskinstance.py:2776} INFO - 0 downstream tasks scheduled from follow-on schedule check

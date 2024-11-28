@@ -1,0 +1,14 @@
+[2024-11-20T10:29:55.050+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: wikipedia_flow.write_wikipedia_data manual__2024-11-20T10:22:16.206442+00:00 [queued]>
+[2024-11-20T10:29:55.054+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: wikipedia_flow.write_wikipedia_data manual__2024-11-20T10:22:16.206442+00:00 [queued]>
+[2024-11-20T10:29:55.054+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 1
+[2024-11-20T10:29:55.060+0000] {taskinstance.py:1380} INFO - Executing <Task(PythonOperator): write_wikipedia_data> on 2024-11-20 10:22:16.206442+00:00
+[2024-11-20T10:29:55.063+0000] {standard_task_runner.py:57} INFO - Started process 729 to run task
+[2024-11-20T10:29:55.065+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'wikipedia_flow', 'write_wikipedia_data', 'manual__2024-11-20T10:22:16.206442+00:00', '--job-id', '12', '--raw', '--subdir', 'DAGS_FOLDER/wikipedia.py', '--cfg-path', '/tmp/tmpa30wosah']
+[2024-11-20T10:29:55.067+0000] {standard_task_runner.py:85} INFO - Job 12: Subtask write_wikipedia_data
+[2024-11-20T10:29:55.124+0000] {task_command.py:415} INFO - Running <TaskInstance: wikipedia_flow.write_wikipedia_data manual__2024-11-20T10:22:16.206442+00:00 [running]> on host scheduler
+[2024-11-20T10:29:55.282+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='ClarkSon Tech' AIRFLOW_CTX_DAG_ID='wikipedia_flow' AIRFLOW_CTX_TASK_ID='write_wikipedia_data' AIRFLOW_CTX_EXECUTION_DATE='2024-11-20T10:22:16.206442+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-11-20T10:22:16.206442+00:00'
+[2024-11-20T10:29:55.288+0000] {logging_mixin.py:151} INFO - No transformed data to write.
+[2024-11-20T10:29:55.289+0000] {python.py:194} INFO - Done. Returned value was: No data to write
+[2024-11-20T10:29:55.302+0000] {taskinstance.py:1398} INFO - Marking task as SUCCESS. dag_id=wikipedia_flow, task_id=write_wikipedia_data, execution_date=20241120T102216, start_date=20241120T102955, end_date=20241120T102955
+[2024-11-20T10:29:55.330+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2024-11-20T10:29:55.342+0000] {taskinstance.py:2776} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,24 @@
+[2024-11-18T08:32:00.992+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: wikipedia_flow.write_wikipedia_data manual__2024-11-18T08:31:54.084044+00:00 [queued]>
+[2024-11-18T08:32:00.996+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: wikipedia_flow.write_wikipedia_data manual__2024-11-18T08:31:54.084044+00:00 [queued]>
+[2024-11-18T08:32:00.996+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 1
+[2024-11-18T08:32:01.002+0000] {taskinstance.py:1380} INFO - Executing <Task(PythonOperator): write_wikipedia_data> on 2024-11-18 08:31:54.084044+00:00
+[2024-11-18T08:32:01.004+0000] {standard_task_runner.py:57} INFO - Started process 1240 to run task
+[2024-11-18T08:32:01.006+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'wikipedia_flow', 'write_wikipedia_data', 'manual__2024-11-18T08:31:54.084044+00:00', '--job-id', '16', '--raw', '--subdir', 'DAGS_FOLDER/wikipedia.py', '--cfg-path', '/tmp/tmpxlqv1uj3']
+[2024-11-18T08:32:01.008+0000] {standard_task_runner.py:85} INFO - Job 16: Subtask write_wikipedia_data
+[2024-11-18T08:32:01.033+0000] {task_command.py:415} INFO - Running <TaskInstance: wikipedia_flow.write_wikipedia_data manual__2024-11-18T08:31:54.084044+00:00 [running]> on host scheduler
+[2024-11-18T08:32:01.153+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Clarkson' AIRFLOW_CTX_DAG_ID='wikipedia_flow' AIRFLOW_CTX_TASK_ID='write_wikipedia_data' AIRFLOW_CTX_EXECUTION_DATE='2024-11-18T08:31:54.084044+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-11-18T08:31:54.084044+00:00'
+[2024-11-18T08:32:01.161+0000] {taskinstance.py:1935} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/operators/python.py", line 192, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/operators/python.py", line 209, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/pipelines/wikipedia_pipeline.py", line 114, in write_wikipedia_data
+    data = json.loads(data)
+  File "/usr/local/lib/python3.9/json/__init__.py", line 339, in loads
+    raise TypeError(f'the JSON object must be str, bytes or bytearray, '
+TypeError: the JSON object must be str, bytes or bytearray, not NoneType
+[2024-11-18T08:32:01.167+0000] {taskinstance.py:1398} INFO - Marking task as FAILED. dag_id=wikipedia_flow, task_id=write_wikipedia_data, execution_date=20241118T083154, start_date=20241118T083200, end_date=20241118T083201
+[2024-11-18T08:32:01.172+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 16 for task write_wikipedia_data (the JSON object must be str, bytes or bytearray, not NoneType; 1240)
+[2024-11-18T08:32:01.187+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2024-11-18T08:32:01.198+0000] {taskinstance.py:2776} INFO - 0 downstream tasks scheduled from follow-on schedule check

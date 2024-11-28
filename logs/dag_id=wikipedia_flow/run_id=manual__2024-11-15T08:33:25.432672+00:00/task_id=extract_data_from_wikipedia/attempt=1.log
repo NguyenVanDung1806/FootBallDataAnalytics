@@ -1,0 +1,25 @@
+[2024-11-15T08:33:26.979+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: wikipedia_flow.extract_data_from_wikipedia manual__2024-11-15T08:33:25.432672+00:00 [queued]>
+[2024-11-15T08:33:26.983+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: wikipedia_flow.extract_data_from_wikipedia manual__2024-11-15T08:33:25.432672+00:00 [queued]>
+[2024-11-15T08:33:26.983+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 1
+[2024-11-15T08:33:26.989+0000] {taskinstance.py:1380} INFO - Executing <Task(PythonOperator): extract_data_from_wikipedia> on 2024-11-15 08:33:25.432672+00:00
+[2024-11-15T08:33:26.992+0000] {standard_task_runner.py:57} INFO - Started process 564 to run task
+[2024-11-15T08:33:26.995+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'wikipedia_flow', 'extract_data_from_wikipedia', 'manual__2024-11-15T08:33:25.432672+00:00', '--job-id', '24', '--raw', '--subdir', 'DAGS_FOLDER/wikipedia.py', '--cfg-path', '/tmp/tmpf4_fgn6o']
+[2024-11-15T08:33:26.996+0000] {standard_task_runner.py:85} INFO - Job 24: Subtask extract_data_from_wikipedia
+[2024-11-15T08:33:27.027+0000] {task_command.py:415} INFO - Running <TaskInstance: wikipedia_flow.extract_data_from_wikipedia manual__2024-11-15T08:33:25.432672+00:00 [running]> on host scheduler
+[2024-11-15T08:33:27.074+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Clarkson' AIRFLOW_CTX_DAG_ID='wikipedia_flow' AIRFLOW_CTX_TASK_ID='extract_data_from_wikipedia' AIRFLOW_CTX_EXECUTION_DATE='2024-11-15T08:33:25.432672+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-11-15T08:33:25.432672+00:00'
+[2024-11-15T08:33:27.074+0000] {logging_mixin.py:151} INFO - Getting wikipedia page... https://en.wikipedia.org/wiki/List_of_association_football_stadiums_by_capacity
+[2024-11-15T08:33:27.630+0000] {taskinstance.py:1935} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/operators/python.py", line 192, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/operators/python.py", line 209, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/pipelines/wikipedia_pipeline.py", line 31, in extract_wikipedia_data
+    rows = get_wikipedia_data(html)
+  File "/opt/airflow/pipelines/wikipedia_pipeline.py", line 24, in get_wikipedia_data
+    table_rows = table.find_all('tr')
+AttributeError: 'NoneType' object has no attribute 'find_all'
+[2024-11-15T08:33:27.636+0000] {taskinstance.py:1398} INFO - Marking task as FAILED. dag_id=wikipedia_flow, task_id=extract_data_from_wikipedia, execution_date=20241115T083325, start_date=20241115T083326, end_date=20241115T083327
+[2024-11-15T08:33:27.642+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 24 for task extract_data_from_wikipedia ('NoneType' object has no attribute 'find_all'; 564)
+[2024-11-15T08:33:27.683+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2024-11-15T08:33:27.693+0000] {taskinstance.py:2776} INFO - 0 downstream tasks scheduled from follow-on schedule check

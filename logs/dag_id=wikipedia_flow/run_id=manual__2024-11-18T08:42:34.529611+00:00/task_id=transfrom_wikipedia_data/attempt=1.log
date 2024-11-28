@@ -1,0 +1,18 @@
+[2024-11-18T08:42:38.592+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: wikipedia_flow.transfrom_wikipedia_data manual__2024-11-18T08:42:34.529611+00:00 [queued]>
+[2024-11-18T08:42:38.596+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: wikipedia_flow.transfrom_wikipedia_data manual__2024-11-18T08:42:34.529611+00:00 [queued]>
+[2024-11-18T08:42:38.596+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 1
+[2024-11-18T08:42:38.601+0000] {taskinstance.py:1380} INFO - Executing <Task(PythonOperator): transfrom_wikipedia_data> on 2024-11-18 08:42:34.529611+00:00
+[2024-11-18T08:42:38.603+0000] {standard_task_runner.py:57} INFO - Started process 1529 to run task
+[2024-11-18T08:42:38.605+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'wikipedia_flow', 'transfrom_wikipedia_data', 'manual__2024-11-18T08:42:34.529611+00:00', '--job-id', '26', '--raw', '--subdir', 'DAGS_FOLDER/wikipedia.py', '--cfg-path', '/tmp/tmp2ivc4v_b']
+[2024-11-18T08:42:38.607+0000] {standard_task_runner.py:85} INFO - Job 26: Subtask transfrom_wikipedia_data
+[2024-11-18T08:42:38.632+0000] {task_command.py:415} INFO - Running <TaskInstance: wikipedia_flow.transfrom_wikipedia_data manual__2024-11-18T08:42:34.529611+00:00 [running]> on host scheduler
+[2024-11-18T08:42:38.746+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Clarkson' AIRFLOW_CTX_DAG_ID='wikipedia_flow' AIRFLOW_CTX_TASK_ID='transfrom_wikipedia_data' AIRFLOW_CTX_EXECUTION_DATE='2024-11-18T08:42:34.529611+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-11-18T08:42:34.529611+00:00'
+[2024-11-18T08:44:39.816+0000] {local_task_job_runner.py:294} WARNING - State of this instance has been externally set to failed. Terminating instance.
+[2024-11-18T08:44:39.821+0000] {process_utils.py:131} INFO - Sending 15 to group 1529. PIDs of all processes in the group: [1529]
+[2024-11-18T08:44:39.822+0000] {process_utils.py:86} INFO - Sending the signal 15 to group 1529
+[2024-11-18T08:44:39.822+0000] {taskinstance.py:1630} ERROR - Received SIGTERM. Terminating subprocesses.
+[2024-11-18T08:44:39.825+0000] {logging_mixin.py:151} INFO - Error while geocoding VELTINS-Arena, Germany: Task received SIGTERM signal
+[2024-11-18T08:45:39.853+0000] {process_utils.py:149} WARNING - process psutil.Process(pid=1529, name='airflow task runner: wikipedia_flow transfrom_wikipedia_data manual__2024-11-18T08:42:34.529611+00:00 26', status='sleeping', started='08:42:38') did not respond to SIGTERM. Trying SIGKILL
+[2024-11-18T08:45:39.862+0000] {process_utils.py:86} INFO - Sending the signal 9 to group 1529
+[2024-11-18T08:45:39.875+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=1529, name='airflow task runner: wikipedia_flow transfrom_wikipedia_data manual__2024-11-18T08:42:34.529611+00:00 26', status='terminated', exitcode=<Negsignal.SIGKILL: -9>, started='08:42:38') (1529) terminated with exit code -9
+[2024-11-18T08:45:39.876+0000] {standard_task_runner.py:172} ERROR - Job 26 was killed before it finished (likely due to running out of memory)

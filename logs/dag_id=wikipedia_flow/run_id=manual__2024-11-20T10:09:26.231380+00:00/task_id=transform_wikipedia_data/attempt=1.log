@@ -1,0 +1,28 @@
+[2024-11-20T10:09:30.904+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: wikipedia_flow.transform_wikipedia_data manual__2024-11-20T10:09:26.231380+00:00 [queued]>
+[2024-11-20T10:09:30.924+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: wikipedia_flow.transform_wikipedia_data manual__2024-11-20T10:09:26.231380+00:00 [queued]>
+[2024-11-20T10:09:30.924+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 1
+[2024-11-20T10:09:30.951+0000] {taskinstance.py:1380} INFO - Executing <Task(PythonOperator): transform_wikipedia_data> on 2024-11-20 10:09:26.231380+00:00
+[2024-11-20T10:09:30.958+0000] {standard_task_runner.py:57} INFO - Started process 299 to run task
+[2024-11-20T10:09:30.964+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'wikipedia_flow', 'transform_wikipedia_data', 'manual__2024-11-20T10:09:26.231380+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/wikipedia.py', '--cfg-path', '/tmp/tmpl6d6g3z3']
+[2024-11-20T10:09:30.973+0000] {standard_task_runner.py:85} INFO - Job 5: Subtask transform_wikipedia_data
+[2024-11-20T10:09:31.061+0000] {task_command.py:415} INFO - Running <TaskInstance: wikipedia_flow.transform_wikipedia_data manual__2024-11-20T10:09:26.231380+00:00 [running]> on host scheduler
+[2024-11-20T10:09:31.190+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='ClarkSon Tech' AIRFLOW_CTX_DAG_ID='wikipedia_flow' AIRFLOW_CTX_TASK_ID='transform_wikipedia_data' AIRFLOW_CTX_EXECUTION_DATE='2024-11-20T10:09:26.231380+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-11-20T10:09:26.231380+00:00'
+[2024-11-20T10:09:31.205+0000] {logging_mixin.py:151} INFO - Initial DataFrame:
+[2024-11-20T10:09:31.212+0000] {logging_mixin.py:151} INFO -     rank  ...                                          home_team
+0     1  ...  Korea DPR national football team, Korea DPR wo...
+1     2  ...                       Michigan Wolverines football
+2     3  ...                       Ohio State Buckeyes football
+3     4  ...  Australia national cricket team, Victoria cric...
+4     5  ...                                       FC Barcelona
+
+[5 rows x 8 columns]
+[2024-11-20T10:12:26.387+0000] {connectionpool.py:871} WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:1129)'))': /arcgis/rest/services/World/GeocodeServer/findAddressCandidates?singleLine=Chorz%C3%B3w%2C+Poland&f=json&maxLocations=1
+[2024-11-20T10:13:48.229+0000] {local_task_job_runner.py:294} WARNING - State of this instance has been externally set to failed. Terminating instance.
+[2024-11-20T10:13:48.238+0000] {process_utils.py:131} INFO - Sending 15 to group 299. PIDs of all processes in the group: [299]
+[2024-11-20T10:13:48.238+0000] {process_utils.py:86} INFO - Sending the signal 15 to group 299
+[2024-11-20T10:13:48.239+0000] {taskinstance.py:1630} ERROR - Received SIGTERM. Terminating subprocesses.
+[2024-11-20T10:13:48.243+0000] {logging_mixin.py:151} INFO - Error while geocoding Lucknow, India: Task received SIGTERM signal
+[2024-11-20T10:14:48.256+0000] {process_utils.py:149} WARNING - process psutil.Process(pid=299, name='airflow task runner: wikipedia_flow transform_wikipedia_data manual__2024-11-20T10:09:26.231380+00:00 5', status='sleeping', started='10:09:30') did not respond to SIGTERM. Trying SIGKILL
+[2024-11-20T10:14:48.264+0000] {process_utils.py:86} INFO - Sending the signal 9 to group 299
+[2024-11-20T10:14:48.276+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=299, name='airflow task runner: wikipedia_flow transform_wikipedia_data manual__2024-11-20T10:09:26.231380+00:00 5', status='terminated', exitcode=<Negsignal.SIGKILL: -9>, started='10:09:30') (299) terminated with exit code -9
+[2024-11-20T10:14:48.277+0000] {standard_task_runner.py:172} ERROR - Job 5 was killed before it finished (likely due to running out of memory)

@@ -1,0 +1,47 @@
+[2024-11-20T10:18:25.440+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: wikipedia_flow.transform_wikipedia_data manual__2024-11-20T10:18:20.588671+00:00 [queued]>
+[2024-11-20T10:18:25.451+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: wikipedia_flow.transform_wikipedia_data manual__2024-11-20T10:18:20.588671+00:00 [queued]>
+[2024-11-20T10:18:25.453+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 1
+[2024-11-20T10:18:25.495+0000] {taskinstance.py:1380} INFO - Executing <Task(PythonOperator): transform_wikipedia_data> on 2024-11-20 10:18:20.588671+00:00
+[2024-11-20T10:18:25.515+0000] {standard_task_runner.py:57} INFO - Started process 481 to run task
+[2024-11-20T10:18:25.540+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'wikipedia_flow', 'transform_wikipedia_data', 'manual__2024-11-20T10:18:20.588671+00:00', '--job-id', '7', '--raw', '--subdir', 'DAGS_FOLDER/wikipedia.py', '--cfg-path', '/tmp/tmp4c3htz2z']
+[2024-11-20T10:18:25.545+0000] {standard_task_runner.py:85} INFO - Job 7: Subtask transform_wikipedia_data
+[2024-11-20T10:18:25.621+0000] {task_command.py:415} INFO - Running <TaskInstance: wikipedia_flow.transform_wikipedia_data manual__2024-11-20T10:18:20.588671+00:00 [running]> on host scheduler
+[2024-11-20T10:18:25.863+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='ClarkSon Tech' AIRFLOW_CTX_DAG_ID='wikipedia_flow' AIRFLOW_CTX_TASK_ID='transform_wikipedia_data' AIRFLOW_CTX_EXECUTION_DATE='2024-11-20T10:18:20.588671+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-11-20T10:18:20.588671+00:00'
+[2024-11-20T10:18:25.884+0000] {logging_mixin.py:151} INFO - Initial DataFrame:
+[2024-11-20T10:18:25.890+0000] {logging_mixin.py:151} INFO -     rank  ...                                          home_team
+0     1  ...  Korea DPR national football team, Korea DPR wo...
+1     2  ...                       Michigan Wolverines football
+2     3  ...                       Ohio State Buckeyes football
+3     4  ...  Australia national cricket team, Victoria cric...
+4     5  ...                                       FC Barcelona
+
+[5 rows x 8 columns]
+[2024-11-20T10:18:26.874+0000] {base.py:396} INFO - Received an HTTP error (403): <html>
+<head>
+<title>Access blocked</title>
+</head>
+<body>
+<h1>Access blocked</h1>
+
+<p>You have been blocked because you have violated the
+<a href="https://operations.osmfoundation.org/policies/nominatim/">usage policy</a>
+of OSM's Nominatim geocoding service. Please be aware that OSM's resources are
+limited and shared between many users. The usage policy is there to ensure that
+the service remains usable for everybody.</p>
+
+<p>Please review the terms and make sure that your
+software adheres to the terms. You should in particular verify that you have set a
+<b>custom HTTP referrer or HTTP user agent</b> that identifies your application, and
+that you are not overusing the service with massive bulk requests.</p>
+
+<p>If you feel that this block is unjustified or remains after you have adopted
+your usage, you may contact the Nominatim system administrator at
+nominatim@openstreetmap.org to have this block lifted.</p>
+</body>
+</head>
+
+[2024-11-20T10:18:26.876+0000] {logging_mixin.py:151} INFO - An error occurred during transformation: Non-successful status code 403
+[2024-11-20T10:18:26.877+0000] {python.py:194} INFO - Done. Returned value was: Transformation failed
+[2024-11-20T10:18:26.909+0000] {taskinstance.py:1398} INFO - Marking task as SUCCESS. dag_id=wikipedia_flow, task_id=transform_wikipedia_data, execution_date=20241120T101820, start_date=20241120T101825, end_date=20241120T101826
+[2024-11-20T10:18:26.941+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2024-11-20T10:18:26.955+0000] {taskinstance.py:2776} INFO - 1 downstream tasks scheduled from follow-on schedule check

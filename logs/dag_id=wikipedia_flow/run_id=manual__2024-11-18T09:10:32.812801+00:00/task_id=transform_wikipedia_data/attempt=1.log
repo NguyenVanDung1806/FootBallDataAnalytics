@@ -1,0 +1,18 @@
+[2024-11-18T09:10:50.071+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: wikipedia_flow.transform_wikipedia_data manual__2024-11-18T09:10:32.812801+00:00 [queued]>
+[2024-11-18T09:10:50.075+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: wikipedia_flow.transform_wikipedia_data manual__2024-11-18T09:10:32.812801+00:00 [queued]>
+[2024-11-18T09:10:50.076+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 1
+[2024-11-18T09:10:50.082+0000] {taskinstance.py:1380} INFO - Executing <Task(PythonOperator): transform_wikipedia_data> on 2024-11-18 09:10:32.812801+00:00
+[2024-11-18T09:10:50.084+0000] {standard_task_runner.py:57} INFO - Started process 249 to run task
+[2024-11-18T09:10:50.086+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'wikipedia_flow', 'transform_wikipedia_data', 'manual__2024-11-18T09:10:32.812801+00:00', '--job-id', '12', '--raw', '--subdir', 'DAGS_FOLDER/wikipedia.py', '--cfg-path', '/tmp/tmpkgym4pip']
+[2024-11-18T09:10:50.088+0000] {standard_task_runner.py:85} INFO - Job 12: Subtask transform_wikipedia_data
+[2024-11-18T09:10:50.113+0000] {task_command.py:415} INFO - Running <TaskInstance: wikipedia_flow.transform_wikipedia_data manual__2024-11-18T09:10:32.812801+00:00 [running]> on host scheduler
+[2024-11-18T09:10:50.219+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='ClarkSon Tech' AIRFLOW_CTX_DAG_ID='wikipedia_flow' AIRFLOW_CTX_TASK_ID='transform_wikipedia_data' AIRFLOW_CTX_EXECUTION_DATE='2024-11-18T09:10:32.812801+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-11-18T09:10:32.812801+00:00'
+[2024-11-18T09:15:27.783+0000] {process_utils.py:131} INFO - Sending 15 to group 249. PIDs of all processes in the group: [249]
+[2024-11-18T09:15:27.785+0000] {process_utils.py:86} INFO - Sending the signal 15 to group 249
+[2024-11-18T09:15:27.786+0000] {taskinstance.py:1630} ERROR - Received SIGTERM. Terminating subprocesses.
+[2024-11-18T09:15:27.790+0000] {logging_mixin.py:151} INFO - Error while geocoding Stade Pierre-Mauroy, France: Task received SIGTERM signal
+[2024-11-18T09:16:25.940+0000] {local_task_job_runner.py:115} ERROR - Received SIGTERM. Terminating subprocesses
+[2024-11-18T09:16:25.944+0000] {process_utils.py:131} INFO - Sending 15 to group 249. PIDs of all processes in the group: [249]
+[2024-11-18T09:16:25.944+0000] {process_utils.py:86} INFO - Sending the signal 15 to group 249
+[2024-11-18T09:16:25.945+0000] {taskinstance.py:1630} ERROR - Received SIGTERM. Terminating subprocesses.
+[2024-11-18T09:16:25.946+0000] {logging_mixin.py:151} INFO - Error while geocoding Free State Stadium, South Africa: Task received SIGTERM signal

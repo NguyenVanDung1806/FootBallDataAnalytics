@@ -1,0 +1,26 @@
+[2024-11-15T08:16:05.947+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: wikipedia_flow.extract_data_from_wikipedia manual__2024-11-15T08:16:04.205064+00:00 [queued]>
+[2024-11-15T08:16:05.951+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: wikipedia_flow.extract_data_from_wikipedia manual__2024-11-15T08:16:04.205064+00:00 [queued]>
+[2024-11-15T08:16:05.951+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 1
+[2024-11-15T08:16:05.958+0000] {taskinstance.py:1380} INFO - Executing <Task(PythonOperator): extract_data_from_wikipedia> on 2024-11-15 08:16:04.205064+00:00
+[2024-11-15T08:16:05.960+0000] {standard_task_runner.py:57} INFO - Started process 289 to run task
+[2024-11-15T08:16:05.963+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'wikipedia_flow', 'extract_data_from_wikipedia', 'manual__2024-11-15T08:16:04.205064+00:00', '--job-id', '20', '--raw', '--subdir', 'DAGS_FOLDER/wikipedia.py', '--cfg-path', '/tmp/tmpkylc7y8h']
+[2024-11-15T08:16:05.964+0000] {standard_task_runner.py:85} INFO - Job 20: Subtask extract_data_from_wikipedia
+[2024-11-15T08:16:06.003+0000] {task_command.py:415} INFO - Running <TaskInstance: wikipedia_flow.extract_data_from_wikipedia manual__2024-11-15T08:16:04.205064+00:00 [running]> on host scheduler
+[2024-11-15T08:16:06.051+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Clarkson' AIRFLOW_CTX_DAG_ID='wikipedia_flow' AIRFLOW_CTX_TASK_ID='extract_data_from_wikipedia' AIRFLOW_CTX_EXECUTION_DATE='2024-11-15T08:16:04.205064+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-11-15T08:16:04.205064+00:00'
+[2024-11-15T08:16:06.324+0000] {logging_mixin.py:151} INFO - Getting wikipedia page... https://en.wikipedia.org/wiki/List_of_association_football_stadiums_by_capacity
+[2024-11-15T08:16:06.749+0000] {logging_mixin.py:151} INFO - DEBUG: Found tables: []
+[2024-11-15T08:16:06.749+0000] {taskinstance.py:1935} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/operators/python.py", line 192, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/operators/python.py", line 209, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/pipelines/wikipedia_pipeline.py", line 33, in extract_wikipedia_data
+    rows = get_wikipedia_data(html)
+  File "/opt/airflow/pipelines/wikipedia_pipeline.py", line 24, in get_wikipedia_data
+    raise ValueError("No tables found on the Wikipedia page with the specified class.")
+ValueError: No tables found on the Wikipedia page with the specified class.
+[2024-11-15T08:16:06.755+0000] {taskinstance.py:1398} INFO - Marking task as FAILED. dag_id=wikipedia_flow, task_id=extract_data_from_wikipedia, execution_date=20241115T081604, start_date=20241115T081605, end_date=20241115T081606
+[2024-11-15T08:16:06.761+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 20 for task extract_data_from_wikipedia (No tables found on the Wikipedia page with the specified class.; 289)
+[2024-11-15T08:16:06.769+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2024-11-15T08:16:06.780+0000] {taskinstance.py:2776} INFO - 0 downstream tasks scheduled from follow-on schedule check
